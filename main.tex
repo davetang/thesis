@@ -1,5 +1,7 @@
 \documentclass[12pt,a4paper]{report}
 
+\usepackage{fancytabs}
+
 \usepackage{hyperref}
 \hypersetup{
    colorlinks,
@@ -70,26 +72,33 @@
 \input{chapter/abbreviation}
 
 \chapter{Introduction}
+\fancytab{Chapter 1}{0.8}
 \input{chapter/introduction}
 
 \chapter{Template switching artifacts}
+\fancytab{Chapter 2}{1.6}
 \input{chapter/template_switching}
 \includepdf[pages={-}]{paper/barcode_bias.pdf}
 
 \chapter{Role of small RNAs in DNA damage repair}
+\fancytab{Chapter 3}{2.4}
 \input{chapter/ddrna}
 \includepdf[pages={-}]{paper/ddrna.pdf}
 
 \chapter{CCL2 activates hypoxia related genes}
+\fancytab{Chapter 4}{3.2}
 \input{chapter/ccl2}
 
 \chapter{Regulated expression of repetitive elements}
+\fancytab{Chapter 5}{4}
 \input{chapter/repeat}
 
 \chapter{The blood transcriptome}
+\fancytab{Chapter 6}{4.8}
 \input{chapter/blood}
 
 \chapter{Rett syndrome and piRNAs}
+\fancytab{Chapter 7}{5.6}
 \input{chapter/pirna}
 \includepdf[pages={-}]{paper/pirna.pdf}
 
@@ -97,6 +106,7 @@
 %\input{chapter/regression}
 
 \chapter{General discussion}
+\fancytab{Chapter 8}{6.4}
 \input{chapter/discussion}
 
 \bibliographystyle{unsrt}
