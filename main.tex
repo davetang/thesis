@@ -1,5 +1,9 @@
 \documentclass[12pt,a4paper]{report}
 
+\usepackage{epigraph}
+\setlength\epigraphwidth{14cm}
+\setlength\epigraphrule{0pt}
+
 \usepackage{graphicx}
 \usepackage{pdfpages}
 \graphicspath{ {image/} }
@@ -34,13 +38,13 @@
 \maketitle
 
 \chapter*{Declaration}
-I declare that this is all my own work blah blah blah...
+\input{chapter/declaration}
 
 \chapter*{Abstract}
 \input{chapter/abstract}
 
 \chapter*{Acknowledgements}
-I'd like to thank...
+\input{chapter/acknowledgements}
 
 \chapter*{List of publications}
 
