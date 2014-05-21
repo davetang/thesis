@@ -1,0 +1,103 @@
+\documentclass[12pt,a4paper]{report}
+
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\graphicspath{ {image/} }
+\usepackage{epstopdf}
+\usepackage{bibentry}
+%tells bibentry to (re)use the bibliographic data from the standard BibTeX setup
+\nobibliography*
+
+%\usepackage[resetlabels]{multibib}
+%\newcites{bibliography/reference}{test}
+
+%abbreviations
+\usepackage[refpage]{nomencl}
+\makenomenclature
+
+% Load the package with the acronym option
+\usepackage[acronym,nomain]{glossaries}
+ 
+% Generate the glossary
+\makeglossaries
+
+\begin{document}
+
+%\input{chapter/title}
+
+\title{
+   {Applications of DNA sequencing in transcriptome studies}
+}
+
+\author{Dave Ting Pong Tang}
+\date{\today}
+\maketitle
+
+\chapter*{Declaration}
+I declare that this is all my own work blah blah blah...
+
+\chapter*{Abstract}
+\input{chapter/abstract}
+
+\chapter*{Acknowledgements}
+I'd like to thank...
+
+\chapter*{List of publications}
+
+\begin{enumerate}
+\item \bibentry{francia2012site}
+\item \bibentry{saxena2012pirnas}
+\item \bibentry{Tang01022013}
+\end{enumerate}
+
+\tableofcontents
+
+\listoffigures
+
+\chapter*{List of Abbreviations}
+
+% Acronym definitions
+\newacronym{utc}{UTC}{Coordinated Universal Time}
+\newacronym{adt}{ADT}{Atlantic Daylight Time}
+\newacronym{est}{EST}{Eastern Standard Time}
+ 
+% Use the acronyms
+\gls{utc} is 3 hours behind \gls{adt} and 10 hours ahead of \gls{est}.
+ 
+%Print the glossary
+\printglossaries
+
+\chapter{Introduction}
+\input{chapter/introduction}
+
+\chapter{Template switching artifacts}
+\input{chapter/template_switching}
+\includepdf[pages={-}]{paper/barcode_bias.pdf}
+
+\chapter{Role of small RNAs in DNA damage repair}
+\input{chapter/ddrna}
+\includepdf[pages={-}]{paper/ddrna.pdf}
+
+\chapter{CCL2 activates hypoxia related genes}
+\input{chapter/ccl2}
+
+\chapter{Regulated expression of repetitive elements}
+\input{chapter/repeat}
+
+\chapter{The blood transcriptome}
+\input{chapter/blood}
+
+\chapter{Rett syndrome and piRNAs}
+\input{chapter/pirna}
+\includepdf[pages={-}]{paper/pirna.pdf}
+
+%\chapter{Regression modelling of sequencing data}
+%\input{chapter/regression}
+
+\chapter{General discussion}
+\input{chapter/discussion}
+
+\bibliographystyle{unsrt}
+\bibliography{bibliography/reference}
+
+\end{document}
