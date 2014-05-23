@@ -62,36 +62,31 @@ Since the release of the draft human genome sequence\cite{venter2001sequence, la
    \item N-value paradox: complexity does not correlate with the number of protein coding genes
 \end{enumerate}
 
-If we measure organismal complexity in terms of mental cognition, we observe that complexity is not correlated to the number of chromosomes, the size of genomes, and the number of protein coding genes. Humans have 46 chromosomes and some species of butterflies have over hundreds of chromosomes, such as \textit{Polyommatus atlantica}. In terms of genome size, the species \textit{Polychaos dubium}, a freshwater amoeboid, has one of the largest genomes known with ~670 gb of DNA sequence; humans on the other hand have a genome size of ~3 gb. And lastly humans have roughly the same number of protein-coding genes as \textit{Caenorhabditis elegans}, ~20,000 versus ~21,000, respectively.
+If we measure organismal complexity in terms of mental cognition, we observe that complexity is not correlated to the number of chromosomes, the size of genomes, and the number of protein coding genes. Humans have 46 chromosomes and some species of butterflies have over hundreds of chromosomes, such as \textit{Polyommatus atlantica}. In terms of genome size, the species \textit{Polychaos dubium}, a freshwater amoeboid, has one of the largest genomes known with ~670 gb of DNA sequence; humans on the other hand have a genome size of ~3 gb. And lastly humans have roughly the same number of protein-coding genes as \textit{Caenorhabditis elegans}, ~20,000 versus ~21,000, respectively. However, the \textit{C. elegans} genome is ~100 mb\cite{celegans1998sequencing}, which is ~30 times smaller than the human genome, despite having a similar number of genes. One of the discrepancies between genome sizes despite having a similar number of genes is due to repetitive elements, which makes up roughly 50\% of the human genome. Among 66 vertebrate genomes, the percentage coverage of repetitive elements in the human genome is quite high (Figure ~\ref{fig:repeat_coverage_vertebrate_genome}).
 
+\begin{figure}[h]
+   \centering
+   \includegraphics[width=\textwidth,natwidth=1600,natheight=1148]{repeat_coverage_vertebrate_genome.png}
+   \caption[Coverage of repetitive elements in vertebrate genomes]{The total coverage of repetitive element in 66 vertebrate genomes as annotated by RepeatMasker in the respective genomes\cite{tang2014repcoverage}.}
+   \label{fig:repeat_coverage_vertebrate_genome}
+\end{figure}
 
-The \textit{C. elegans} genome is ~100 mb\cite{celegans1998sequencing}, which is ~30 times smaller than the human genome, despite having a similar number of genes. The difference in the genome size is mainly due to repetitive elements, which makes up roughly 50\% of the human genome.
+However, the larger vertebrate genomes do not always contain the highest percentage of repetitive elements (Figure ~\ref{fig:genome_size}). At least in humans, transposons make up the majority of the repetitive elements that make up the human genome. In particular class I transposons (retrotransposons), which are able to transcribed and inserted into the genome, make up a large portion of the human genome. W.Ford Doolittle and Carmen Sapienza wrote in 1980\cite{doolittle1980selfish}: "When a given DNA, or class of DNAs, of unproven phenotypic function can be shown to have evolved a strategy (such as transposition) which ensures its genomic survival, then no other explanation for its existence is necessary" and Leslie Orgel and Francis Crick, wrote that junk DNA has little specificity and conveys little or no selective advantage to the organism\cite{orgel1980selfish}.
 
 The origin of the term "junk DNA" is usually attributed to Susumu Ohno, who used it to describe pseudogenes, which are gene copies that have no known biological function. In its modern day usage, "junk DNA" is used to describe DNA sequence that goes not play a functional role in an organism. Dr. Ohno estimated that there would be an upper limit to the number of functional loci in mammalian genomes based on mutational load and a fixed mutation rate. He predicted that mammalian genomes could not have more than 30,000 loci under selection as this would guarantee a progressive decline in fitness, leading to extinction.
 
-In 1980, Leslie Orgel and Francis Crick, wrote that junk DNA has little specificity and conveys little or no selective advantage to the organism\cite{orgel1980selfish}.
-
-W.Ford Doolittle and Carmen Sapienza wrote in 1980\cite{doolittle1980selfish}: "When a given DNA, or class of DNAs, of unproven phenotypic function can be shown to have evolved a strategy (such as transposition) which ensures its genomic survival, then no other explanation for its existence is necessary."
-
 \begin{figure}[h]
-  \centering
-  \includegraphics[width=\textwidth,natwidth=1600,natheight=1148]{repeat_coverage_vertebrate_genome.png}
-  \caption[Coverage of repetitive elements in vertebrate genomes]
-   {The total coverage of repetitive element in 66 vertebrate genomes as annotated by RepeatMasker in the respective genomes\cite{tang2014repcoverage}.}
+   \centering
+   \includegraphics[width=\textwidth,natwidth=1600,natheight=932]{genome_size.png}
+   \caption[Vertebrate genomes sizes]{The genome sizes of 66 vertebrate genomes, sorted from the lowest to highest percent of repetitive element coverage\cite{tang2014gensize}.}
+   \label{fig:genome_size}
 \end{figure}
 
 \begin{figure}[h]
-  \centering
-  \includegraphics[width=\textwidth,natwidth=1600,natheight=932]{genome_size.png}
-  \caption[Vertebrate genomes sizes]
-   {The genome sizes of 66 vertebrate genomes, sorted from the lowest to highest percent of repetitive element coverage\cite{tang2014gensize}.}
-\end{figure}
-
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=10cm, angle=270]{barplot_repeat_family.eps}
-  \caption[Tally of repetitive element families in the hg19 genome]
-   {The number of repetitive element families determined by RepeatMasker in the hg19 genome.}
+   \centering
+   \includegraphics[width=9cm, angle=270]{barplot_repeat_family.eps}
+   \caption[Tally of repetitive element families in the hg19 genome]{The number of repetitive element families determined by RepeatMasker in the hg19 genome.}
+   \label{fig:repeat_family}
 \end{figure}
 
 \begin{itemize}
