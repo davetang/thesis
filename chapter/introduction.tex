@@ -106,18 +106,28 @@ The genetic information encoded in DNA is transcribed into RNA by RNA polymerase
 
 \subsection{Reverse transcription}
 
+\subsection{Characterising the transcriptome}
+
 \begin{itemize}
 
    \item Studies on the yeast transcriptome using DNA microarrays showed that although mRNAs are being degraded and re-synthesised all the time, the composition of the yeast transcriptome undergoes very little change if the environment remains constant
    \item However on switching from aerobic to anaerobic respiration, the levels of over 700 mRNAs increase by a factor of two or higher, and another 1,000 mRNAs decline to less than half their original amount
    \item Studying the transcriptome of acute lymphoblastic leukemia cells with respect to acute myeloid leukemia cells revealed differences that made it possible to distinguish the two types of leukemia
-   \item Collection of full length cDNAs by the FANTOM consortium revealed many transcripts of unknown function (TUFs)
+   \item Collection of mouse full length cDNAs by the FANTOM consortium revealed many transcripts of unknown function (TUFs)
+   \item 38.6\% of the FANTOM3 mouse full-length cDNAs have very low coding potential (CPAT coding probability of less than 0.2) (Figure ~\ref{fig:fantom3_coding_prob})
    \item The technologies that allowed full length cDNA sequencing
    \item Cap Analysis Gene Expression (CAGE) for genome-wide identification of transcription start sites
    \item Biotinylation of diol groups of RNA (High Efficiency Selection of Full-length cDNA by Improved Biotinylated Cap Trapper)
    \item PacBio sequencing has read lengths greater than 10kb and can be used for full length cDNA sequencing
 
 \end{itemize}
+
+\begin{figure}[h]
+   \centering
+   \includegraphics[width=\textwidth,natwidth=1000,natheight=718]{fantom3_coding_probability.png}
+   \caption[Coding probability of FANTOM3 mouse cDNAs]{Distribution of coding probabilities of FANTOM3 mouse full-length cDNAs as predicted by CPAT\cite{tang2014fantom3codingprob}.}
+   \label{fig:fantom3_coding_prob}
+\end{figure}
 
 \section{The repetitive genome}
 
