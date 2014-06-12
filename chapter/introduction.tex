@@ -47,6 +47,8 @@ The Maxam-Gilbert sequencing method relies on the use of chemicals that can clea
 
 Sanger sequencing became the \textit{de facto} method for DNA sequencing due to its comparative ease and the use of fewer toxic materials than Maxam-Gilbert sequencing. A further improvement to Sanger sequencing replaced the need to radioactively label the DNA fragments by using chemically synthesised fluorescent oligonucleotide primers\cite{pmid3713851}. Four different fluorophores were used for each ddNTP reaction allowing all four reactions to be co-electrophoresed and the DNA sequence was deduced by reading the fluorescence colours. The development of a fluorescence detection apparatus linked to a computer that processed the data created the world's first partially automated DNA sequencer\cite{pmid3713851}.
 
+(Figure ~\ref{fig:dev_next_gen})
+
 \begin{figure}[h]
    \centering
    \includegraphics[width=\textwidth,natwidth=720,natheight=540]{developments-in-next-generation-sequencing.jpg}
@@ -84,18 +86,11 @@ The transcriptome is the collection of RNA molecules derived from the genome at 
 
 \subsection{Transcription}
 
-The genome is a store of biological information but requires the coordinated activity of enzymes and proteins to bring about transcription. Chromatin structure and nucleosome positioning are altered in order for the transcriptional machinery to access parts of the genome for transcription. The pre-initiation complex that contains RNA polymerase II and general transcription factors forms near the core promoter region around the transcription start site and primes RNA polymerase II for transcription. Processing of precursor RNA include the addition of a cap and poly-A tail, splicing, and RNA editing. Removal of the cap is considered to the first step towards mRNA degradation. The capping procedure is thought to occur only in the nucleus, however a cytoplasmic form of a capping enzyme has been identified; the role of cytoplasmic re-capping.
+The genome is a store of biological information that requires the coordinated activity of enzymes and proteins to bring it to life. Transcription is a highly regulated mechanism that processes the DNA in the genome into RNA (Figure ~\ref{fig:transcription}). The process begins with the transcription preinitiation complex (PIC) forming near the core promoter region, which contains binding sites for the PIC. The core promoter is the closest type of promoter to the transcription start site (TSS); there are also proximal and distal promoters that are further away from the TSS. The PIC contains RNA polymerase II and general transcription factors and positions the RNA polymerase for transcription.
 
-\begin{itemize}
+The default state of transcription in eukaryotes is off, meaning that genes are not constantly transribed. Structural properties of DNA make it inaccessible to the PIC; chromatin structure and nucleosome positioning are altered in order for the transcriptional machinery to access parts of the genome for transcription. Transcription factors (TFs) are regulatory proteins that can activate the transcription of DNA by binding to specific DNA sequences (they are also known to negatively regulate transcription but this is less common). For example, the core promoter elements include the TATA box, the initiator element (Inr), the downstream promoter element (DPE), the TFIIB recognition element (BRE) and the CpG island (CGI). Each of these elements are necesarry for transcription; for example the TATA binding protein (TBP) binds to the TATA box and is involved in DNA strand separation during transcription.
 
-   \item The transcription preinitiation complex (PIC) positions the polymerase over the transcription start site
-   \item The PIC binds at the promoter, which contains binding sites for the PIC
-   \item Classification of promoters depend on the distance from the TSS, core, proximal, and distal promoter
-   \item The TATA box is a sequence that contains a TA-rich pattern about 30 bp upstream from the TSS
-   \item The TATA binding protein (TBP) binds to the TATA box and is involved in DNA strand separation during transcription
-   \item Core promoter elements include the initiator element (Inr), the downstream promoter element (DPE), the TFIIB recognition element (BRE) and the CpG island (CGI)
-
-\end{itemize}
+Processing of precursor RNA include the addition of a cap and poly-A tail, splicing, and RNA editing. Removal of the cap is considered to the first step towards mRNA degradation. The capping procedure is thought to occur only in the nucleus, however a cytoplasmic form of a capping enzyme has been identified; the role of cytoplasmic re-capping.
 
 \begin{figure}[h]
    \centering
@@ -103,10 +98,6 @@ The genome is a store of biological information but requires the coordinated act
    \caption[DNA transcription]{The process of transcription begins with RNA polymerase, which reads the DNA sequence (the template strand) in the 5' to 3' direction and produces a complementary RNA strand called the messenger RNA (mRNA). The mRNA has the same sequence as the coding strand, except that thymines are replaced by uracils. Image by NHS National Genetics and Genomics Education Centre licensed under the Creative Commons license.}
    \label{fig:transcription}
 \end{figure}
-
-\subsection{RNA polymerase}
-
-The genetic information encoded in DNA is transcribed into RNA by RNA polymerases.
 
 \subsection{Reverse transcription}
 
@@ -218,10 +209,19 @@ Modern day high-throughput sequencers generate large amounts of data; for exampl
 
 The FASTQ format was formally defined in 2010\cite{pmid20015970} and has become the \textit{de facto} format for storing raw sequencing output. FASTQ is similar to the FASTA format with the addition of storing quality scores for each nucleotide. The format is simplistic, which may be the reason for its popularity before being formalised. The establishment of a standard format is important as developers can produce programs, such as sequence aligners, that can process output from different sequencing machines. Another standard file format for storing sequence alignments is the Sequence Alignment/Map (SAM) format\cite{pmid19505943}.
 
-\begin{itemize}
-   \item Wet bench research goes hand in hand with bioinformatics
-   \item BEDTools \cite{pmid20110278}
-   \item BWA \cite{pmid19451168}
-   \item edgeR \cite{pmid19910308}
-   \item Bioconductor \cite{pmid15461798}
-\end{itemize}
+The reads generated from the second generation of sequencers were much shorter and much more numerous than traditional Sanger sequencing reads. The Illumina GAII can produce up to 100 million reads of 50 bp in a single run. Traditional sequence alignment tools using the Needleman–Wunsch algorithm or Smith–Waterman algorithm were simply too slow and new developments were necessary. The popular short-read alignment tool, BWA\cite{pmid19451168}, implements the Burrows–Wheeler transform to deal with the vast number of short reads.
+
+Comparing genomic features using BEDTools\cite{pmid20110278}.
+
+Expression data sets are commonly stored as matices; for example if we let $A$ be an $m \times n$ matrix, where $a_{ij}$ are elements of $A$, the $i^{th}$ row would represent the transcriptional response of the $i^{th}$ gene and the $j^{th}$ column would represent the expression profile of the $j^{th}$ assay:
+
+\begin{align*}
+   A = \begin{bmatrix} a_{11} & \cdots & a_{1j} & \cdots & a_{1n} \\
+   . && . && . \\
+   a_{i1} & \cdots & a_{ij} & \cdots & a_{in} \\
+   . && . && . \\
+   a_{m1} & \cdots & a_{mj} & \cdots & a_{mn} \end{bmatrix}
+\end{align*}
+
+A differential expression analysis can be easily performed on an expression matrix, such as by using the edgeR package\cite{pmid19910308} from Bioconductor\cite{pmid15461798}. Multidimensional scaling methods, such as Singular Vector Decomposition (SVD), can also be applied on the matrix to find underlying patterns in the data. A very popular visualisation method of expression data is the use of heatmaps that reflect the relative expression strength of each element in the matrix ($a_{mn}$), which is commonly used in tandem with hierarchical clustering. Co-expression matrices can be further derived from the expression matrix to find transcripts with a similar transcriptional response or assays with similar expression profiles. Networks or graphs can be built from such co-expression matrices for visual purposes or for analysing the structure of co-expression patterns.
+
