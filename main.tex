@@ -79,35 +79,36 @@
 
 \input{chapter/abbreviation}
 
-\chapter{Introduction}
-\fancytab{Chapter 1}{0.8}
+\chapter{Introduction}\label{intro}
+\fancytab{Chapter ~\ref{intro}}{0.8}
 \input{chapter/introduction}
 
-\chapter{Template switching artifacts}
-\fancytab{Chapter 2}{1.6}
+\chapter{Template switching artifacts}\label{template_switching}
+\fancytab{Chapter ~\ref{template_switching}}{1.6}
 \input{chapter/template_switching}
-\includepdf[pages={-}]{paper/barcode_bias.pdf}
+%to include page styles in pdf, pagecommand=\thispagestyle{plain}
+\includepdf[pages={-}, lastpage={12}]{paper/barcode_bias.pdf}
 
-\chapter{Role of small RNAs in DNA damage repair}
-\fancytab{Chapter 3}{2.4}
+\chapter{Role of small RNAs in DNA damage repair}\label{ddrna}
+\fancytab{Chapter ~\ref{ddrna}}{2.4}
 \input{chapter/ddrna}
-\includepdf[pages={-}]{paper/ddrna.pdf}
+\includepdf[pages={-}, lastpage={8}]{paper/ddrna.pdf}
 
-\chapter{Rett syndrome and piRNAs}
-\fancytab{Chapter 4}{3.2}
+\chapter{Rett syndrome and piRNAs}\label{pirna}
+\fancytab{Chapter ~\ref{pirna}}{3.2}
 \input{chapter/pirna}
-\includepdf[pages={-}]{paper/pirna.pdf}
+\includepdf[pages={-}, lastpage={15}]{paper/pirna.pdf}
 
-\chapter{CCL2 activates hypoxia related genes}
-\fancytab{Chapter 5}{4}
+\chapter{CCL2 activates hypoxia related genes}\label{ccl2}
+\fancytab{Chapter ~\ref{ccl2}}{4}
 \input{chapter/ccl2}
 
-\chapter{Regulated expression of repetitive elements}
-\fancytab{Chapter 6}{4.8}
+\chapter{Regulated expression of repetitive elements}\label{repeat}
+\fancytab{Chapter ~\ref{repeat}}{4.8}
 \input{chapter/repeat}
 
-\chapter{The blood transcriptome}
-\fancytab{Chapter 7}{5.6}
+\chapter{The blood transcriptome}\label{blood}
+\fancytab{Chapter ~\ref{blood}}{5.6}
 \input{chapter/blood}
 
 %\chapter{Regression modelling of sequencing data}
