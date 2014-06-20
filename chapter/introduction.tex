@@ -12,7 +12,7 @@ This thesis focuses primarily on the study of transcriptomes using high-throughp
 
 The classical definition of a gene dates back to Gregor Mendel when he demonstrated in his plant breeding experiments that discrete traits could be inherited from parents to offspring. While the mechanism of inheritance wasn't clear at that time, these heritable traits were termed a gene. The definition of a gene has evolved with our increasing knowledge of genetics and biochemistry\cite{pmid17567988}. The idea that genes were blueprints for proteins was perceived when mutations in Neurospora genes could cause defects in steps in metabolic pathways\cite{pmid16578042}. This became the ``one gene, one polypeptide" hypothesis; the idea was that each gene was responsible for producing a single enzyme/protein in a biochemical pathway. The association of DNA with genes began with Griffith's Experiment\cite{griffith1928significance}, where it was demonstrated that heritable traits could be transferred between dead and live bacteria. It was later demonstrated that this heritable material was DNA\cite{avery1944studies}.
 
-DNA was discovered by Johannes Friedrich Miescher who subsequently named it nuclein. In 1881, Albrecht Kossel determined that nuclein was composed of five bases: adenine (A), cytosine (C), guanine (G), thymine (T), and uracil (U) and in 1889, Richard Altmann discovered that nuclein was acidic and renamed it as nucleic acid. The basic component of DNA was deduced by Phoebus Levene in 1909, where he discovered that DNA consisted of an acid, an organic base, and a sugar; he also showed that these components were linked together as phosphate-sugar-base to form units, which he termed nucleotides. This sugar-phosphate backbone forms the structural framework of nucleic acids. While Levene proposed that DNA was made up equal amounts of A, C, G, and T, it was discovered by Erwin Chargaff that DNA should have a 1:1 ratio of pyrimidine (C, T, and U) and purine (A and G) bases, which is known as Chargaff's rules. Chargaff's rules was one of the observations that led to the eventual deduction of the three-dimensional (3D) structure of DNA.
+DNA was discovered by Johannes Friedrich Miescher who subsequently named it nuclein. In 1881, Albrecht Kossel determined that nuclein was composed of five bases: adenine (A), cytosine (C), guanine (G), thymine (T), and uracil (U) and in 1889, Richard Altmann discovered that nuclein was acidic and renamed it as nucleic acid. The basic component of DNA was deduced by Phoebus Levene in 1909, where he discovered that DNA consisted of an acid, an organic base, and a sugar; he also showed that these components were linked together as phosphate-sugar-base to form units, which he termed nucleotides. This sugar-phosphate backbone forms the structural framework of nucleic acids and make DNA highly stable. While Levene proposed that DNA was made up equal amounts of A, C, G, and T, it was discovered by Erwin Chargaff that DNA should have a 1:1 ratio of pyrimidine (C, T, and U) and purine (A and G) bases, which is known as Chargaff's rules. Chargaff's rules was one of the observations that led to the eventual deduction of the three-dimensional (3D) structure of DNA.
 
 The 3D structure of DNA showed how adenines paired with thymines and cytosines paired with guanine\cite{WATSON_1953}; this is now known as Watson-Crick base pairing (Figure ~\ref{fig:dna}). The base pairing explained how genetic information could be copied as they famously wrote in their paper:
 
@@ -102,6 +102,10 @@ As transcription takes place, the DNA double helix unwinds and RNA polymerase re
 
 Processing of precursor RNA include the addition of a cap and poly-A tail, splicing, and RNA editing. Removal of the cap is considered to the first step towards mRNA degradation. The capping procedure is thought to occur only in the nucleus, however a cytoplasmic form of a capping enzyme has been identified; the role of cytoplasmic re-capping.
 
+A specialised nucleotide cap is added to the 5' end and this is the site recognised by the ribosomes in protein synthesis. The ribosome binds to the cap and reads along the 5' untranslated region (UTR) until it reaches an initiation codon.
+
+Some introns are removed by specific proteins known as splicing factors, where other introns are removed independently through autocatalysis.
+
 The default state of transcription in eukaryotes is off, meaning that genes are not constantly transcribed. Structural properties of DNA make it inaccessible to the PIC; chromatin structure and nucleosome positioning are altered in order for the transcriptional machinery to access parts of the genome for transcription. Transcription factors (TFs) are regulatory proteins that can activate the transcription of DNA by binding to specific DNA sequences (they are also known to negatively regulate transcription but this is less common). For example, the core promoter elements include the TATA box, the initiator element (Inr), the downstream promoter element (DPE), the TFIIB recognition element (BRE) and the CpG island (CGI). Each of these elements are necessary for transcription; for example the TATA binding protein (TBP) binds to the TATA box and is involved in DNA strand separation during transcription.
 
 
@@ -112,7 +116,11 @@ The default state of transcription in eukaryotes is off, meaning that genes are 
    \label{fig:transcription}
 \end{figure}
 
-\subsection{Reverse transcription}
+\subsection{Transcript regulation}
+
+Control of the frequency and rate of transcription and by the stability of the transcripts and translational efficiency for protein-coding transcripts.
+
+Methylation of specific bases in the DNA.
 
 \subsection{Characterising the transcriptome}
 
@@ -148,7 +156,9 @@ The default state of transcription in eukaryotes is off, meaning that genes are 
 
 \subsection{Non-coding RNAs}
 
-Micro-RNAs (miRNAs) were first first observed in 1993 in Caenorhabditis elegans\cite{pmid8252621} as a small double-stranded RNA that were bound to the 3' untranslated region (UTR) of an mRNA. The binding of the miRNA inhibited the translation of the mRNA and is one of the mechanisms by which miRNAs post-transcriptionally regulate gene expression. The biogenesis of miRNAs begins with the cleavage by an enzyme called Dicer\cite{pmid11201747}, which is part of the RNase III family. miRNAs inhibit translation by recruiting a ribonucleoprotein complex called RNA-induced silencing complex (RISC). Short-interfering RNAs are also cleaved by Dicer and can also bind to mRNA but require complete complementarity. MiRNAs are products of dsRNAs encoded in genes in our genome and do not require full complementarity to bind to a target mRNA thus one miRNA may regulate several genes. 
+Micro-RNAs (miRNAs) were first first observed in 1993 in Caenorhabditis elegans\cite{pmid8252621} as a small double-stranded RNA that were bound to the 3' untranslated region (UTR) of an mRNA. The binding of the miRNA inhibited the translation of the mRNA and is one of the mechanisms by which miRNAs post-transcriptionally regulate gene expression. The biogenesis of miRNAs begins with the cleavage by an enzyme called Dicer\cite{pmid11201747}, which is part of the RNase III family. miRNAs inhibit translation by recruiting a ribonucleoprotein complex called RNA-induced silencing complex (RISC). Short-interfering RNAs are also cleaved by Dicer and can also bind to mRNA but require complete complementarity. MiRNAs are products of dsRNAs encoded in genes in our genome and do not require full complementarity to bind to a target mRNA thus one miRNA may regulate several genes.
+
+A single-stranded nucleic acid molecule will tend to fold up on itself to form localised double-stranded regions, producing structures called hairpins or stem-loop structures. This is due to the hydrophobic nature of the bases, which means that the bases are unstable when exposed to an aqueous environment. Pairing of the bases enables them to be removed from interaction with the surrounding water and stabilising the DNA helix.
 
 \section{The repetitive genome}
 
