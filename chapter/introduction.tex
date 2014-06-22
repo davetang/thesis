@@ -96,6 +96,8 @@ The transcriptome is the collection of RNA molecules derived from the genome at 
 
 The genome is a store of biological information that requires the coordinated activity of enzymes and proteins to bring it to life. Transcription is a highly regulated mechanism that processes DNA into a single-stranded RNA molecule and begins with RNA polymerase attaching to the template DNA strand (Figure ~\ref{fig:transcription}). In some cases, the RNA molecule is the functional product, however, the RNA can be further translated into a protein molecule. There are three different types of RNA polymerases in eukaryotic cells: Pol I transcribes the genes that encode most of the ribosomal RNAs (rRNAs); Pol II transcribes the messenger RNAs (mRNAs); and Pol III transcribes the genes for small regulatory RNA molecules, such as transfer RNA (tRNA).
 
+Messenger RNAs are transcripts of protein-coding genes and are translated into protein
+
 RNA polymerase usually binds upstream to the DNA that will be transcribed; this region is known as the promoter. Promoters are classified by their distance to the transcription start site (TSS): the core promoter is the closest and is required for transcription; the proximal promoter is the next closest ($\sim~250$ bp) and usually contains primary regulatory elements; distal promoters contain additional regulatory elements and is further upstream. Commonly, mRNAs have a TATA box 25 to 35 bases upstream of the TSS to which the RNA polymerase binds to. In addition to RNA polymerase, a number of essential cofactors (known as general transcription factors) are required for transcription, such as TFIIB and TFIID; TFIID recognises the TATA box and TFIIB recognises the TFIIB recognition element (BRE). Transcription with Pol I and Pol III are similar, but the promoter sequences and activator proteins differ.
 
 As transcription takes place, the DNA double helix unwinds and RNA polymerase reads the template strand; the RNA sequence will have the same sequence as the coding strand. The termination of transcription relies on terminator sequences that are found close to the ends of transcripts. For Pol I transcripts, transcription is stopped by a termination factor that unwinds the DNA-RNA hybrid formed during transcription. For Pol III transcripts, inverted repeats are transcribed and these sequences can form hairpin loops that pauses the RNA polymerase. For Pol II transcripts, a polyadenylation signal (AAUAAA) at the end of the sequence is necessary for termination\cite{pmid3479794}. The nascent RNA is cleaved at the polyadenylation site and a poly-adenine tail (poly(A)) is added; the poly(A) tail is important for the stability of the RNA, translation, and for nuclear export.
@@ -124,11 +126,20 @@ Methylation of specific bases in the DNA.
 
 \subsection{Characterising the transcriptome}
 
-\begin{itemize}
+Microarrays \cite{pmid7569999}
 
-   \item Studies on the yeast transcriptome using DNA microarrays showed that although mRNAs are being degraded and re-synthesised all the time, the composition of the yeast transcriptome undergoes very little change if the environment remains constant
-   \item However on switching from aerobic to anaerobic respiration, the levels of over 700 mRNAs increase by a factor of two or higher, and another 1,000 mRNAs decline to less than half their original amount
-   \item Studying the transcriptome of acute lymphoblastic leukemia cells with respect to acute myeloid leukemia cells revealed differences that made it possible to distinguish the two types of leukemia
+Studies on the yeast transcriptome using DNA microarrays showed that although mRNAs are being degraded and re-synthesised all the time, the composition of the yeast transcriptome undergoes very little change if the environment remains constant\cite{pmid9381177}
+However on switching from aerobic to anaerobic respiration, the levels of over 700 mRNAs increase by a factor of two or higher, and another 1,000 mRNAs decline to less than half their original amount
+Studying the transcriptome of acute lymphoblastic leukemia cells with respect to acute myeloid leukemia cells revealed differences that made it possible to distinguish the two types of leukemia
+
+\begin{itemize}
+   \item Pervasive transcription describes the observation that a large percentage of DNA in mammalian genomes is transcribed.
+   \item Tiling arrays and full length cDNA sequencing suggested that most of the genome is transcribed
+   \item The ENCODE pilot project provided multiple lines of evidence that most of the mammalian genome is associated with at least one primary transcript, i.e., pervasive transcription of the genome
+   \item Are the majority of detected low-level transcription due to technical artifacts and/or background biological noise?
+   \item Protocols that capture only poly-A transcripts as opposed to poly-A minus and cytoplasmic versus nuclear enrichment libraries
+   \item Sequencing depth and sampling of RNA molecules; absolute transcript quantification will help (such as using unique molecule identifiers and non-PCR based methods)
+   \item Functional transcriptomics in the post-ENCODE era, specifically what is the criteria for functionality
    \item Collection of mouse full length cDNAs by the FANTOM consortium revealed many transcripts of unknown function (TUFs)
    \item 38.6\% of the FANTOM3 mouse full-length cDNAs have very low coding potential (CPAT coding probability of less than 0.2) (Figure ~\ref{fig:fantom3_coding_prob})
    \item The technologies that allowed full length cDNA sequencing
@@ -157,9 +168,16 @@ Transcription start sites (TSSs) are the nucleotides that are the first to be tr
 
 \subsection{Non-coding RNAs}
 
+Diverse class of non-coding RNAs, broadly broken down into long and short non-coding RNA
+
+Classical non-coding RNA found in both prokaryotes and eukaryotes are ribosomal RNAs and transfer RNAs, which are both involved in protein synthesis
+
 Micro-RNAs (miRNAs) were first first observed in 1993 in Caenorhabditis elegans\cite{pmid8252621} as a small double-stranded RNA that were bound to the 3' untranslated region (UTR) of an mRNA. The binding of the miRNA inhibited the translation of the mRNA and is one of the mechanisms by which miRNAs post-transcriptionally regulate gene expression. The biogenesis of miRNAs begins with the cleavage by an enzyme called Dicer\cite{pmid11201747}, which is part of the RNase III family. miRNAs inhibit translation by recruiting a ribonucleoprotein complex called RNA-induced silencing complex (RISC). Short-interfering RNAs are also cleaved by Dicer and can also bind to mRNA but require complete complementarity. MiRNAs are products of dsRNAs encoded in genes in our genome and do not require full complementarity to bind to a target mRNA thus one miRNA may regulate several genes.
 
 A single-stranded nucleic acid molecule will tend to fold up on itself to form localised double-stranded regions, producing structures called hairpins or stem-loop structures. This is due to the hydrophobic nature of the bases, which means that the bases are unstable when exposed to an aqueous environment. Pairing of the bases enables them to be removed from interaction with the surrounding water and stabilising the DNA helix.
+
+Assembly of non-coding RNAs with proteins as ribonucleoprotein (RNP) structures
+Interaction of non-coding RNAs with chromatin
 
 \section{The repetitive genome}
 
@@ -199,18 +217,6 @@ The origin of the term ``junk DNA" is usually attributed to Susumu Ohno, who use
 \end{figure}
 
 \begin{itemize}
-   \item Messenger RNAs are transcripts of protein-coding genes and are translated into protein
-   \item Classical non-coding RNA found in both prokaryotes and eukaryotes are ribosomal RNAs and transfer RNAs, which are both involved in protein synthesis
-   \item Diverse class of non-coding RNAs, broadly broken down into long and short non-coding RNA
-   \item Assembly of non-coding RNAs with proteins as ribonucleoprotein (RNP) structures
-   \item Interaction of non-coding RNAs with chromatin
-   \item Pervasive transcription describes the observation that a large percentage of DNA in mammalian genomes is transcribed.
-   \item Tiling arrays and full length cDNA sequencing suggested that most of the genome is transcribed
-   \item The ENCODE pilot project provided multiple lines of evidence that most of the mammalian genome is associated with at least one primary transcript, i.e., pervasive transcription of the genome
-   \item Are the majority of detected low-level transcription due to technical artifacts and/or background biological noise?
-   \item Protocols that capture only poly-A transcripts as opposed to poly-A minus and cytoplasmic versus nuclear enrichment libraries
-   \item Sequencing depth and sampling of RNA molecules; absolute transcript quantification will help (such as using unique molecule identifiers and non-PCR based methods)
-   \item Functional transcriptomics in the post-ENCODE era, specifically what is the criteria for functionality
    \item Repeat-associated binding sites (RABS) are over-represented in proximity of regulated genes and that the binding motifs within these repeats have undergone evolutionary selection
    \item Indeed, studies conducted both at the gene and genome levels have uncovered TE insertions that seem to have been co-opted - or exapted - by providing transcription factor binding sites (TFBSs) that serve as promoters and enhancers, leading to the hypothesis that TE exaptation is a major factor in the evolution of gene regulation.
    \item The transcription of repetitive elements, especially transposable elements, in specific tissues
