@@ -58,13 +58,14 @@ Sanger sequencing\cite{pmid271968} and Maxam-Gilbert sequencing\cite{pmid265521}
 
 Sanger sequencing became the \textit{de facto} method for DNA sequencing due to its comparative ease and the use of fewer toxic materials than Maxam-Gilbert sequencing. A further improvement to Sanger sequencing replaced the need to radioactively label the DNA fragments by using chemically synthesised fluorescent oligonucleotide primers\cite{pmid3713851}. Four different fluorophores were used for each ddNTP reaction allowing all four reactions to be co-electrophoresed and the DNA sequence was deduced by reading the fluorescence colours. The development of a fluorescence detection apparatus linked to a computer that processed the data created the world's first partially automated DNA sequencer\cite{pmid3713851}.
 
-\subsection{Next-gen sequencing}
+\subsection{Next-generation sequencing}
 
-The next wave of DNA sequencing methods, the so-called next generation or second generation sequencing, started with the development of pryosequencing. Pyrosequencing relies on the release of pyrophosphate when a nucleotide is incorporated into a growing DNA strand. The pyrophosphate released can be detected by a coupled enzymatic reaction in which ATP sulphurylase converts adenosine 5'-phosphosulphate (APS) to ATP, which enables a second enzyme, luciferase, to react with its substrate (luciferin), generating visible light, which is measured by a detector. Pyrophosphate will only be generated if the DNA synthesis reaction is supplied with the correct dNTP. Automated pyrosequencing using slides that contain tiny reaction wells, less than 100 picolitres in volume, so that over 1 million wells are contained on a 60 by 60 mm slide. The size of the DNA beads ensures that each well will contain only one DNA bead, and therefore only one specific DNA fragment.
+The next wave of DNA sequencing methods, the so-called next-generation (next-gen) or second generation sequencing, started with various strategies that rely on a combination template preparation, sequencing, and imaging that allowed thousands to billions of sequencing reactions to be performed simultaneously\cite{pmid19997069}. One of the first commercially available next-gen sequence was pyrosequencing, which relies on the release of pyrophosphate when a nucleotide is incorporated into a growing DNA strand. The pyrophosphate released can be detected by a coupled enzymatic reaction in which ATP sulphurylase converts adenosine 5'-phosphosulphate (APS) to ATP, which enables a second enzyme, luciferase, to react with its substrate (luciferin), generating visible light, which is measured by a detector. Pyrophosphate will only be generated if the DNA synthesis reaction is supplied with the correct dNTP. Automated pyrosequencing using slides that contain tiny reaction wells, less than 100 picolitres in volume, so that over 1 million wells are contained on a 60 by 60 mm slide. The size of the DNA beads ensures that each well will contain only one DNA bead, and therefore only one specific DNA fragment.
 
-High-throughput sequencing is, however, not limited to genome sequencing. The discovery of reverse transcriptase\cite{pmid4316300, pmid4316301} allowed the generation of complementary DNA (cDNA) from an ribonucleic acid (RNA) template; thus we are able to sequence the entire collection of RNA, known as the transcriptome, from biological samples. Other applications of sequencing has allowed us to capture in a genome-wide manner DNA-protein interactions, DNA methylation patterns, and histone modifications\cite{applicationsofsequencing}. Many of these applications are named with a ``Seq" suffix; for example RNA-Seq refers to RNA sequencing and ChIP-Seq refers to chromatin immunoprecipitation followed by sequencing. There are a large number of *Seq protocols\cite{pachter2014seq}, which is set to increase with the decrease in sequencing costs and the development of innovations in molecular biology.
+SOLiD sequencing is based on ligation rather than polymerisation for reading the sequence.
 
-(Figure ~\ref{fig:dev_next_gen})
+Solexa/Illumina sequencing is based on size-selected short fragments that are denatured and attached individually to an ultra-high-density flow cell. The flow cell is covered with two types of single-stranded oligonucleotides, each one complementary to one strand of the adaptor fragments.
+
 
 \begin{figure}[h]
    \centering
@@ -73,12 +74,9 @@ High-throughput sequencing is, however, not limited to genome sequencing. The di
    \label{fig:dev_next_gen}
 \end{figure}
 
+(Figure ~\ref{fig:dev_next_gen})
 
-SOLiD sequencing is based on ligation rather than polymerisation for reading the sequence.
-
-Solexa/Illumina sequencing is based on size-selected short fragments that are denatured and attached individually to an ultra-high-density flow cell. The flow cell is covered with two types of single-stranded oligonucleotides, each one complementary to one strand of the adaptor fragments.
-
-Sequencing technologies - the next generation \cite{pmid19997069}
+High-throughput sequencing is, however, not limited to genome sequencing. The discovery of reverse transcriptase\cite{pmid4316300, pmid4316301} allowed the generation of complementary DNA (cDNA) from an ribonucleic acid (RNA) template; thus we are able to sequence the entire collection of RNA, known as the transcriptome, from biological samples. Other applications of sequencing has allowed us to capture in a genome-wide manner DNA-protein interactions, DNA methylation patterns, and histone modifications\cite{applicationsofsequencing}. Many of these applications are named with a ``Seq" suffix; for example RNA-Seq refers to RNA sequencing and ChIP-Seq refers to chromatin immunoprecipitation followed by sequencing. There are a large number of *Seq protocols\cite{pachter2014seq}, which is set to increase with the decrease in sequencing costs and the development of innovations in molecular biology.
 
 \section{Applications of sequencing}
 
