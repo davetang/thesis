@@ -4,7 +4,7 @@ In the winter of 1868/9, Swiss physician and biologist, Johannes Friedrich Miesc
 
 While Phoebus Levene proposed that DNA was made up equal amounts of A, C, G, and T, it was later discovered by Erwin Chargaff that DNA should have a 1:1 ratio of pyrimidine (C, T, and U) and purine (A and G) bases\cite{pmid14938364, pmid14945441}; this became known as Chargaff's rules. The three-dimensional (3D) structure of DNA was solved by Francis Crick and James Watson in 1953\cite{WATSON_1953} after gaining insight from an X-ray diffraction image taken by Rosalind Franklin and from Chargaff's rules. The 3D structure of DNA showed how adenines paired with thymines and cytosines paired with guanine (Figure ~\ref{fig:dna}). The base pairing, now known as Watson-Crick base pairing, explained how genetic information could be copied.
 
-\begin{figure}[h]
+\begin{figure}[!ht]
    \centering
    \includegraphics[width=\textwidth,natwidth=625,natheight=307]{dna.jpg}
    \caption[The structure of DNA]{The structure of DNA is based on the repeated pattern of a sugar and phosphate group, known as the sugar phosphate backbone, and the base pairing of the four bases, adenine (A), cytosine (C), guanine (G), and thymine (T). Image by NHS National Genetics and Genomics Education Centre licensed under the Creative Commons license.}
@@ -17,7 +17,7 @@ The definition of a gene has evolved with our increasing knowledge of genetics a
 
 The genome is a store of biological information that requires the coordinated activity of enzymes and proteins to bring it to life. This is achieved via transcription, which is a highly regulated mechanism that begins with RNA polymerase attaching to DNA and processes the template DNA strand into a single-stranded RNA molecule (Figure ~\ref{fig:transcription}). Transcription results in two main classes of RNA or transcripts: (1) Protein-coding transcripts, where the RNA known as messenger RNA (mRNA) can be further translated into a protein molecule and (2) Non-coding transcripts, where the RNA molecule is the functional product. There are three different types of RNA polymerases in eukaryotic cells: Pol I transcribes the genes that encode most of the ribosomal RNAs (rRNAs); Pol II transcribes the mRNAs; and Pol III transcribes the genes for small regulatory RNA molecules, such as transfer RNA (tRNA). RNA polymerase binds upstream to the DNA that will be transcribed at a region known as the promoter. Promoters can be classified by their distance to the transcription start site (TSS), which are the first nucleotides transcribed by RNA polymerase. The core promoter is the closest to the TSS and contains specific DNA sequences or elements that are necessary for transcription. The core promoter elements include the TATA box (usually located 25 to 35 bases upstream of the TSS), the initiator element (Inr), the downstream promoter element (DPE), the TFIIB recognition element (BRE) and the CpG island (CGI). The proximal promoter is the next closest (at $\sim~250$ bp) and usually contains primary regulatory elements; distal promoters are even further upstream and contain additional regulatory elements. Transcription with Pol I and Pol III are similar, but the promoter sequences and activator proteins differ.
 
-\begin{figure}[h]
+\begin{figure}[!ht]
    \centering
    \includegraphics[width=\textwidth,natwidth=842,natheight=595]{transcription.jpg}
    \caption[DNA transcription]{The process of transcription begins with RNA polymerase, which reads the DNA sequence (the template strand) in the 5' to 3' direction and produces a complementary RNA strand called the messenger RNA (mRNA). The mRNA has the same sequence as the coding strand, except that thymines are replaced by uracils. Image by NHS National Genetics and Genomics Education Centre licensed under the Creative Commons license.}
@@ -32,7 +32,7 @@ The termination of transcription relies on terminator sequences that are found c
 
 Inside every somatic nucleated cell in the human body are 23 pairs of chromosomes; these chromosomes make up the human genome. A chromosome is a long DNA molecule that is condensed so that it may physically fit inside the nucleus (Figure ~\ref{fig:dna_condensed}). We can estimate the physical length the human genome by multiplying the number of base pairs contained on each chromosome by the length of a base pair. The haploid human genome contains around 3\e{9} base pairs of DNA; therefore there is a total of 6 billion base pairs of DNA per cell. Given that each base pair of DNA is about 0.34 nanometers long or 3.4\e{-10} meters\cite{pmid7354864}, each diploid cell contains 3.4\e{-10} * 3\e{9} * 2 or 2.04 meters of DNA. Given that the estimated number of cells in the human body is around 3.7\e{13} or 37 trillion\cite{pmid23829164}, a typical person contain around 74 trillion meters of DNA. Certain proteins, called histones, help compact the vast amounts of DNA inside of us (specifically, inside the eukaryotic nucleus). The histones are a family of small, positively charged proteins that provide the energy, in the form of electrostatic interactions, to fold negatively charged DNA (due to the phosphate groups in its phosphate-sugar backbone). The core histones are H2A, H2B, H3, and H4 and the resulting DNA-protein complex is called chromatin.
 
-\begin{figure}[h]
+\begin{figure}[!ht]
    \centering
    \includegraphics[width=\textwidth,natwidth=650,natheight=539]{dna_condensed.jpg}
    \caption[Condensation of DNA]{DNA is condensed into chromosomes by forming DNA-protein complexes known chromatin, which is further coiled into thicker fibers called 30nm fibers. The chromosomes reside inside the nucleus of a cell. Mitochondria also contain its own DNA. Image by NHS National Genetics and Genomics Education Centre licensed under the Creative Commons license.}
@@ -68,7 +68,7 @@ The third generation of sequencing refers to single-molecule sequencing technolo
 
 With the advent of next-gen sequencing we have the capacity to sequence an entire human genome in a matter of days. Developments in next-gen sequencing are aiming towards longer read lengths with higher output (Figure ~\ref{fig:dev_next_gen}) and we have just recently arrived in the \$1,000 genome era, whereby we can sequence the entire genome of an individual for around \$1,000 US dollars (USD). In contrast, the Human Genome Project (HGP), which gave us the first glimpse of the human genome\cite{lander2001initial} costed approximately 2.7 billion fiscal year 1991 US dollars\cite{nhgri2010cost}. Next-gen sequencing is also not just limited to genome sequencing; reverse transcriptase\cite{pmid4316300, pmid4316301} allow for the synthesis of complementary DNA (cDNA) from RNA and therefore the entire collection of RNA, known as the transcriptome, can be sequenced. Other applications of next-gen sequencing has allowed us to capture in a genome-wide manner DNA-protein interactions, DNA methylation patterns, and histone modifications\cite{applicationsofsequencing} and the number of protocols utilising next-gen sequencing are continually growing\cite{pachter2014seq}.
 
-\begin{figure}[h]
+\begin{figure}[!ht]
    \centering
    \includegraphics[width=\textwidth,natwidth=720,natheight=540]{developments-in-next-generation-sequencing.jpg}
    \caption[Developments in next generation sequencing]{Log read length versus log gigabases per run for various next generation sequences\cite{Nederbragt2012}.}
@@ -83,11 +83,25 @@ RNA sequencing (RNA-Seq) is an application of next-gen sequencing used to catalo
 
 \subsection{Cap Analysis Gene Expression}
 
-Cap Analysis Gene Expression (CAGE) was conceived as a method to detect all known transcription factors and active promoters for understanding the interplay between the two\cite{carninci2010capanalysis}. At that time sequencing was still relatively expensive and thus came the idea of cutting and concatenating 5' ends of full-length cDNAs, followed by sequencing. The use of CAGE in the FANTOM3 project unveiled the transcriptional landscape of the mammalian genome\cite{pmid16141072}, which identified many novel mRNAs and non-coding RNAs. Insight into the promoter architecture was also revealed by CAGE, where two major classes were discovered: conserved TATA box-enriched promoters and CpG-rich promoters\cite{pmid16645617}. FANTOM4\cite{pmid19377474}. FANTOM5\cite{pmid24670764}.
+Cap Analysis Gene Expression (CAGE) was initially conceived as an idea of profiling all active promoters and TFs for understanding the interplay between the two\cite{carninci2010capanalysis}. CAGE uses a molecular technique known as Cap-Trapper\cite{pmid8938445,pmid9179497}, which allows the capturing of all RNAs that have a cap structure (specifically the diol group of RNA were biotinylated). (Figure ~\ref{fig:cage_protocol})
+
+\begin{figure}[!ht]
+   \centering
+   \includegraphics[width=\textwidth,natwidth=2254,natheight=3051]{cage_protocol.png}
+   \caption[Cap Analysis Gene Expression protocol]{Cap Analysis Gene Expression (CAGE)}
+   \label{fig:cage_protocol}
+\end{figure}
+
+Second, a biotinylated linker is attached to 5' end of single-strand cDNA acquired by removing the RNA strand using RNaseI. This linker contains recognition sites that are essential for cloning, short specific base sequences, and endonuclease recognition sites (MmeI or EcoP15I). After the second cDNA strand is synthesized, 20 nucleotides or with the class IIs restriction enzyme (MmeI) or 27 nucleotides apart (EcoP15I) are cut from the 5' end to make the CAGE tag. Next, a linker is attached to the 3' side of the tag sequence to amplify it. Previously fragments were cleaved and concatenated in CAGE tags, but current “next generation” sequencers (Illumina, SOLiD, Helicos) do not need cleavage and the tags can be directly sequenced to produce millions of tags per sample.
+
+The cap is right at the start of a precursor transcript, thus this position represents the TSS. The output of CAGE is a set of short tags that correspond to the capped RNAs, with the number of tags reflecting the abundance of the RNAs.
+
+The small fragments (usually 27 nucleotides long) from the very beginnings of mRNAs (5' ends of capped transcripts) are extracted, reverse-transcribed to DNA, PCR amplified and sequenced.
+
+At that time sequencing was still relatively expensive and thus came the idea of cutting and concatenating 5' ends of full-length cDNAs, followed by sequencing. The use of CAGE in the FANTOM3 project unveiled the transcriptional landscape of the mammalian genome\cite{pmid16141072}, which identified many novel mRNAs and non-coding RNAs. Insight into the promoter architecture was also revealed by CAGE, where two major classes were discovered: conserved TATA box-enriched promoters and CpG-rich promoters\cite{pmid16645617}. FANTOM4\cite{pmid19377474}. FANTOM5\cite{pmid24670764}.
 
 Regulatory regions will control the rate of transcription for a gene. Experimental validation include cloning fragments of DNA around and upstream from the transcription start site of a gene and testing for promoter activity by using a vector that carries a promoterless reporter gene. This approach can test whether a DNA fragment has promoter activity or not but the specific sequence that confers the promoter activity is unknown as well as the transcription factors that interact with the DNA fragment. Using mutagenesis it is possible to test how different mutations affect the promoter activity.
 
-One such technology for capturing TSSs is called Cap Analysis Gene Expression (CAGE), which essentially captures RNA that have a cap structure (specifically biotinylation of diol groups of RNA\cite{pmid8938445}) and sequences them. The cap is right at the start of a precursor transcript, thus this position represents the TSS. The output of CAGE is a set of short tags that correspond to the capped RNAs, with the number of tags reflecting the abundance of the RNAs.
 
 Cap Analysis Gene Expression (CAGE) for genome-wide identification of transcription start sites
 
@@ -108,7 +122,7 @@ Cap Analysis Gene Expression (CAGE) for genome-wide identification of transcript
 
 \end{itemize}
 
-\begin{figure}[h]
+\begin{figure}[!ht]
    \centering
    \includegraphics[width=\textwidth,natwidth=1000,natheight=718]{fantom3_coding_probability.png}
    \caption[Coding probability of FANTOM3 mouse cDNAs]{Distribution of coding probabilities of FANTOM3 mouse full-length cDNAs as predicted by CPAT\cite{tang2014fantom3codingprob}.}
@@ -140,7 +154,7 @@ Since the release of the draft human genome sequence\cite{venter2001sequence, la
 
 If we measure organismal complexity in terms of mental cognition, we observe that complexity is not correlated to the number of chromosomes, the size of genomes, and the number of protein coding genes. Humans have 46 chromosomes and some species of butterflies have over hundreds of chromosomes, such as \textit{Polyommatus atlantica}. In terms of genome size, the species \textit{Polychaos dubium}, a freshwater amoeboid, has one of the largest genomes known with around 670 gb of DNA sequence; humans on the other hand have a genome size of roughly 3 gb. And lastly humans have roughly the same number of protein-coding genes as \textit{Caenorhabditis elegans}, roughly 20,000 versus 21,000, respectively. However, the \textit{C. elegans} genome is about 100 mb\cite{celegans1998sequencing}, which is approximately 30 times smaller than the human genome, despite having a similar number of genes. One of the discrepancies between genome sizes despite having a similar number of genes is due to repetitive elements, which makes up roughly 50\% of the human genome. Among 66 vertebrate genomes, the percentage coverage of repetitive elements in the human genome is quite high (Figure ~\ref{fig:repeat_coverage_vertebrate_genome}).
 
-\begin{figure}[h]
+\begin{figure}[!ht]
    \centering
    \includegraphics[width=\textwidth,natwidth=1600,natheight=1148]{repeat_coverage_vertebrate_genome.png}
    \caption[Coverage of repetitive elements in vertebrate genomes]{The total coverage of repetitive element in 66 vertebrate genomes as annotated by RepeatMasker in the respective genomes\cite{tang2014repcoverage}.}
@@ -151,14 +165,14 @@ However, the larger vertebrate genomes do not always contain the highest percent
 
 The origin of the term ``junk DNA" is usually attributed to Susumu Ohno, who used it to describe pseudogenes, which are gene copies that have no known biological function. In its modern day usage, ``junk DNA" is used to describe DNA sequence that goes not play a functional role in an organism. Dr. Ohno estimated that there would be an upper limit to the number of functional loci in mammalian genomes based on mutational load and a fixed mutation rate. He predicted that mammalian genomes could not have more than 30,000 loci under selection as this would guarantee a progressive decline in fitness, leading to extinction.
 
-\begin{figure}[h]
+\begin{figure}[!ht]
    \centering
    \includegraphics[width=\textwidth,natwidth=1600,natheight=932]{genome_size.png}
    \caption[Vertebrate genomes sizes]{The genome sizes of 66 vertebrate genomes, sorted from the lowest to highest percent of repetitive element coverage\cite{tang2014gensize}.}
    \label{fig:genome_size}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[!ht]
    \centering
    \includegraphics[width=9cm, angle=270]{barplot_repeat_family.eps}
    \caption[Tally of repetitive element families in the hg19 genome]{The number of repetitive element families determined by RepeatMasker in the hg19 genome.}
