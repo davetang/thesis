@@ -83,34 +83,19 @@ RNA sequencing (RNA-Seq) is an application of next-gen sequencing used to catalo
 
 \subsection{Cap Analysis Gene Expression}
 
-Cap Analysis Gene Expression (CAGE) was initially conceived as an idea of profiling all active promoters and TFs for understanding the interplay between the two\cite{carninci2010capanalysis}. CAGE uses a molecular technique known as Cap-Trapper\cite{pmid8938445,pmid9179497}, which allows the capturing of all RNAs that have a cap structure (specifically the diol group of RNA were biotinylated). (Figure ~\ref{fig:cage_protocol})
+Cap Analysis Gene Expression (CAGE) was initially conceived as an idea of profiling all active promoters and TFs for understanding the interplay between the two\cite{carninci2010capanalysis}. CAGE uses a molecular technique known as Cap-Trapper\cite{pmid8938445,pmid9179497}, which allows the capturing of all RNAs that have a cap structure (specifically the diol group of RNA were biotinylated). (Figure ~\ref{fig:cage_protocol}). CAGE allows the genome-wide identification of transcription start sites as well as their expression levels and has been used in various FANTOM projects\cite{pmid16141072, pmid19377474, pmid24670764} and in ENCODE\cite{pmid17571346, pmid22955620}. In the FANTOM3 project, CAGE unveiled the transcriptional landscape in mammalian genomes\cite{pmid16141072} and identified many novel mRNAs and non-coding RNAs not previously characterised and revealed two major classes of promoters: conserved TATA box-enriched promoters and CpG-rich promoters\cite{pmid16645617}. Two variants of CAGE include nanoCAGE\cite{pmid20543846} and HeliScopeCAGE\cite{pmid21596820}. NanoCAGE utilises the template-switching method\cite{pmid11314272} instead of Cap-Trapper and allows for smaller starting amounts of RNA, to the level of RNA content in single cells. HeliScopeCAGE utilises Cap-Trapper but without the enzymatic tag cleavage and PCR amplification, and the capped 5' ends of the cDNA are directly sequenced on the HeliScope sequencer.
 
 \begin{figure}[!ht]
    \centering
-   \includegraphics[width=\textwidth,natwidth=2254,natheight=3051]{cage_protocol.png}
-   \caption[Cap Analysis Gene Expression protocol]{Cap Analysis Gene Expression (CAGE)}
+   \includegraphics[width=\textwidth,natwidth=2254,natheight=3051,totalheight=0.5\textheight]{cage_protocol.png}
+   \caption[Cap Analysis Gene Expression protocol]{The Cap Analysis Gene Expression (CAGE) protocol starts with synthesising cDNA from either total RNA or mRNA by using random or oligo dT primers (only random primers are shown here). Reverse transcription takes place in RNAs with or without a cap and to full or partial completion; the RNase I digestion removes partially reverse transcribed RNA as they are not protected by a full double strand. The 5' end of cDNAs are selected by streptavidin beads and unbound cDNA are washed out. After release from the bead, a linker is attached to the 5' end of the single-stranded cDNA; this linker contains recognition sites that allow the endonuclease cleavage. Lastly a linker is attached to the 3' end of the tag sequence, which is amplified and directly sequenced.}
    \label{fig:cage_protocol}
 \end{figure}
-
-Second, a biotinylated linker is attached to 5' end of single-strand cDNA acquired by removing the RNA strand using RNaseI. This linker contains recognition sites that are essential for cloning, short specific base sequences, and endonuclease recognition sites (MmeI or EcoP15I). After the second cDNA strand is synthesized, 20 nucleotides or with the class IIs restriction enzyme (MmeI) or 27 nucleotides apart (EcoP15I) are cut from the 5' end to make the CAGE tag. Next, a linker is attached to the 3' side of the tag sequence to amplify it. Previously fragments were cleaved and concatenated in CAGE tags, but current “next generation” sequencers (Illumina, SOLiD, Helicos) do not need cleavage and the tags can be directly sequenced to produce millions of tags per sample.
-
-The cap is right at the start of a precursor transcript, thus this position represents the TSS. The output of CAGE is a set of short tags that correspond to the capped RNAs, with the number of tags reflecting the abundance of the RNAs.
-
-The small fragments (usually 27 nucleotides long) from the very beginnings of mRNAs (5' ends of capped transcripts) are extracted, reverse-transcribed to DNA, PCR amplified and sequenced.
-
-At that time sequencing was still relatively expensive and thus came the idea of cutting and concatenating 5' ends of full-length cDNAs, followed by sequencing. The use of CAGE in the FANTOM3 project unveiled the transcriptional landscape of the mammalian genome\cite{pmid16141072}, which identified many novel mRNAs and non-coding RNAs. Insight into the promoter architecture was also revealed by CAGE, where two major classes were discovered: conserved TATA box-enriched promoters and CpG-rich promoters\cite{pmid16645617}. FANTOM4\cite{pmid19377474}. FANTOM5\cite{pmid24670764}.
-
-Regulatory regions will control the rate of transcription for a gene. Experimental validation include cloning fragments of DNA around and upstream from the transcription start site of a gene and testing for promoter activity by using a vector that carries a promoterless reporter gene. This approach can test whether a DNA fragment has promoter activity or not but the specific sequence that confers the promoter activity is unknown as well as the transcription factors that interact with the DNA fragment. Using mutagenesis it is possible to test how different mutations affect the promoter activity.
-
-
-Cap Analysis Gene Expression (CAGE) for genome-wide identification of transcription start sites
 
 \subsection{Insights from RNA-Seq}
 
 \begin{itemize}
-   \item Pervasive transcription describes the observation that a large percentage of DNA in mammalian genomes is transcribed.
    \item Tiling arrays and full length cDNA sequencing suggested that most of the genome is transcribed
-   \item The ENCODE pilot project provided multiple lines of evidence that most of the mammalian genome is associated with at least one primary transcript, i.e., pervasive transcription of the genome
    \item Are the majority of detected low-level transcription due to technical artifacts and/or background biological noise?
    \item Protocols that capture only poly-A transcripts as opposed to poly-A minus and cytoplasmic versus nuclear enrichment libraries
    \item Sequencing depth and sampling of RNA molecules; absolute transcript quantification will help (such as using unique molecule identifiers and non-PCR based methods)
@@ -144,6 +129,8 @@ Interaction of non-coding RNAs with chromatin
 
 \section{The repetitive genome}
 
+The FANTOM and ENCODE projects demonstrated that a large percentage of the mammalian genome is transcribed, which became known as pervasive transcription\cite{pmid21765801}. Critique of ENCODE\cite{pmid23431001, pmid23479647, pmid23137679}.
+
 Since the release of the draft human genome sequence\cite{venter2001sequence, lander2001initial}, it was established that only a small fraction of the genome is made up of protein-coding sequences and the majority of the genome was made up with repetitive elements. As the human genome contains the entire instruction set that is necessary for the development of a human, the decoding of the genome was thought to provide answers to many outstanding biological questions. However, there are several paradoxes that are still currently unresolved:
 
 \begin{enumerate}
@@ -172,13 +159,6 @@ The origin of the term ``junk DNA" is usually attributed to Susumu Ohno, who use
    \label{fig:genome_size}
 \end{figure}
 
-\begin{figure}[!ht]
-   \centering
-   \includegraphics[width=9cm, angle=270]{barplot_repeat_family.eps}
-   \caption[Tally of repetitive element families in the hg19 genome]{The number of repetitive element families determined by RepeatMasker in the hg19 genome.}
-   \label{fig:repeat_family}
-\end{figure}
-
 \begin{itemize}
    \item Repeat-associated binding sites (RABS) are over-represented in proximity of regulated genes and that the binding motifs within these repeats have undergone evolutionary selection
    \item Indeed, studies conducted both at the gene and genome levels have uncovered TE insertions that seem to have been co-opted - or exapted - by providing transcription factor binding sites (TFBSs) that serve as promoters and enhancers, leading to the hypothesis that TE exaptation is a major factor in the evolution of gene regulation.
@@ -187,7 +167,6 @@ The origin of the term ``junk DNA" is usually attributed to Susumu Ohno, who use
    \item Functions of some GWAS candidates in intergenic regions (such as http://www.nature.com/nature/journal/v507/n7492/full/nature13138.html)
    \item The regulated retrotransposon transcriptome of mammalian cells\cite{pmid19377475}
 \end{itemize}
-
 
 \section{Stem cells}
 
