@@ -24,7 +24,11 @@ The genome is a store of biological information that requires the coordinated ac
    \label{fig:transcription}
 \end{figure}
 
+\subsection{Transcription factors}
+
 Transcription factors (TFs) are regulatory proteins that can activate or enhance the transcription of DNA by binding to specific DNA sequences at promoters (they are also known to negatively regulate transcription but this is less common). TFs contain one or more DNA-binding domains that allow it to bind to specific sequences. For example, the TATA binding protein (TBP), known as a general transcription factor (GTF), binds to the TATA box and is involved in DNA strand separation during transcription. Other GTFs include TFIIA, TFIIB, TFIID, TFIIE, TFIIF, and TFIIH, and are necessary for transcription to take place. Not all the GTFs bind to DNA but are part of the large transcription preinitiation complex (PIC) that interacts with RNA polymerase and helps position RNA polymerase over the TSS. As transcription takes place, the DNA double helix unwinds and RNA polymerase reads the template strand; the RNA sequence will have the same sequence as the coding strand. While the rate of transcription directly governs the number of transcripts that are present, the stability of transcripts also play a part.
+
+\subsection{Post-transcriptional modifications}
 
 The termination of transcription relies on terminator sequences that are found close to the ends of transcripts. For Pol I transcripts, transcription is stopped by a termination factor that unwinds the DNA-RNA hybrid formed during transcription. For Pol III transcripts, inverted repeats are transcribed and these sequences can form hairpin loops that pauses the RNA polymerase. For Pol II transcripts, a polyadenylation signal (AAUAAA) at the end of the sequence is necessary for termination\cite{pmid3479794}. The nascent RNA is cleaved at the polyadenylation site and a poly-adenine tail (poly(A)) is added; the poly(A) tail is important for the stability of the RNA, translation, and for nuclear export. In addition to this, a specialised nucleotide cap is added to the 5' end and this is the site recognised by the ribosomes in protein synthesis. The ribosome binds to the cap and reads along the 5' untranslated region (UTR) until it reaches an initiation codon. Removal of the cap is considered to the first step towards mRNA degradation. The capping procedure is thought to occur only in the nucleus, however a cytoplasmic form of a capping enzyme has been identified\cite{pmid22921400}. The default state of transcription in eukaryotes is that most genes are not constantly transcribed, unlike in prokaryotes. Structural properties of DNA make it inaccessible to the PIC; chromatin structure and nucleosome positioning are altered in order for the transcriptional machinery to access parts of the genome for transcription.
 
@@ -39,7 +43,11 @@ Inside every somatic nucleated cell in the human body are 23 pairs of chromosome
    \label{fig:dna_condensed}
 \end{figure}
 
-Chromatin possesses a fundamental repeating structure\cite{holde01111974}, known as nucleosomes and the packaging of DNA into nucleosomes shortens DNA about sevenfold. However despite this, chromatin is still too long to fit inside the nucleus, which is approximately 10 to 20 microns in diameter. Chromatin is further coiled into a thicker fiber, called the 30nm fiber, because it is roughly 30 nanometers in diameter. Processes such as transcription and replication require the two strands of DNA to come apart temporarily, thus allowing polymerases access to the DNA template. However, the presence of nucleosomes and the folding of chromatin into 30-nanometer fibers pose barriers to the enzymes that unwind and copy DNA. It is therefore important for cells to have means of opening up chromatin fibers and/or removing histones transiently to permit transcription and replication to proceed. Generally speaking, there are two major mechanisms by which chromatin is made more accessible:
+Chromatin possesses a fundamental repeating structure\cite{holde01111974}, known as nucleosomes and the packaging of DNA into nucleosomes shortens DNA about sevenfold. However despite this, chromatin is still too long to fit inside the nucleus, which is approximately 10 to 20 microns in diameter. Chromatin is further coiled into a thicker fiber, called the 30nm fiber, because it is roughly 30 nanometers in diameter. Processes such as transcription and replication require the two strands of DNA to come apart temporarily, thus allowing polymerases access to the DNA template. However, the presence of nucleosomes and the folding of chromatin into 30-nanometer fibers pose barriers to the enzymes that unwind and copy DNA. It is therefore important for cells to have means of opening up chromatin fibers and/or removing histones transiently to permit transcription and replication to proceed.
+
+\subsection{Histone modifications}
+
+Generally speaking, there are two major mechanisms by which chromatin is made more accessible:
 
 \begin{enumerate}
    \item Histones can be enzymatically modified by the addition of acetyl, methyl, or phosphate groups.
@@ -63,6 +71,8 @@ Sanger sequencing became the \textit{de facto} method for DNA sequencing due to 
 The next wave of DNA sequencing methods, the so-called next-generation (next-gen) or second generation sequencing, started with various strategies that rely on a combination template preparation, sequencing, and imaging that allowed thousands to billions of sequencing reactions to be performed simultaneously\cite{pmid19997069}. Next-gen sequencing relies on the clonal amplification of templates and use \textit{in vitro} cloning rather than bacterial cloning; the two most common methods are emulsion PCR (emPCR)\cite{pmid12857956} and solid-phase amplification\cite{pmid16473845}. With emPCR individual DNA molecules are isolated with primer-coated beads in water-in-oil microreactors and clonal amplification leads to thousands of copies of the DNA molecule in an emulsion. 454 pyrosequencing and SOLiD sequencing use emPCR, where the amplification product is deposited into individual wells for sequencing. Solid-phase amplification relies on a lawn of high-density primers that are covalently attached on a slide surface (also known as a flow cell) and bind to DNA molecules ligated with sequencing adaptors. The two methods allow each DNA template to be spatially separated, allowing massively parallel sequencing to take place.
 
 Sequencing can take place via the use of DNA polymerase, which is commonly known as sequencing-by-synthesis, and via the use of DNA ligase, known as sequencing-by-ligation (SBL). SBS can be further classified into cyclic reversible termination (CRT), single-nucleotide addition (SNA) and real-time sequencing\cite{pmid19997069}. CRT uses reversible terminators and initial developments used the same dideoxynucleotides used as chain terminators in Sanger sequencing. The concept of CRT is that a DNA polymerase incorporates one fluorescently modified nucleotide, which has a reversible terminator that terminates DNA synthesis. Unincorporated nucleotides are washed away and fluorescence imaging takes place to determine the identity of the incorporated nucleotide. The last step removes or cleaves the reversible terminator and the fluorescent dye and the cycle is repeated. The CRT method is used in Solexa/Illumina and Helicos sequencing. SBL relies on DNA ligase and either one-base-encoded or two-base-encoded probes that are fluorescently labelled. The probes hybridise to its complementary sequence on the primed template and DNA ligase is added to join the probe to the primer. Non-ligated probes are washed away followed by fluorescence imaging and cleavage of the fluorescent dye and the cycle is repeated. The SBL method is used in SOLiD sequencing.
+
+\subsection{Third generation sequencing and beyond}
 
 The third generation of sequencing refers to single-molecule sequencing technologies, which have the capacity for longer read lengths at potentially cheaper costs\cite{pmid20858600}. One of the main advantages of single-molecule sequencing is that PCR is not required, therefore amplification biases and PCR mutations are eliminated. Furthermore, quantitative applications of sequencing such as RNA sequencing are much more representative of the true abundance of RNA molecules. The HeliScope sequencer was the first commercially available single-molecule sequencer, which was based on the work of Stephen Quake and colleagues\cite{pmid12651960}. HeliScope sequencing utilises billions of primed single-molecule templates are covalently attached to the solid support and uses CRT but with slight differences from Solexa/Illumina sequencing. HeliScope uses Helicos Virtual Terminators, which differ from the reversible terminators used in Solexa/Illumina sequencing and dye labelled nucleotides are added individually in the predetermined order of C, T, A, and G, which is followed by fluorescence imaging.
 
@@ -92,20 +102,16 @@ Cap Analysis Gene Expression (CAGE) was initially conceived as an idea of profil
    \label{fig:cage_protocol}
 \end{figure}
 
-\subsection{Insights from RNA-Seq}
+\subsection{Transcriptome studies}
 
-\begin{itemize}
-   \item Tiling arrays and full length cDNA sequencing suggested that most of the genome is transcribed
-   \item Are the majority of detected low-level transcription due to technical artifacts and/or background biological noise?
-   \item Protocols that capture only poly-A transcripts as opposed to poly-A minus and cytoplasmic versus nuclear enrichment libraries
-   \item Sequencing depth and sampling of RNA molecules; absolute transcript quantification will help (such as using unique molecule identifiers and non-PCR based methods)
-   \item Functional transcriptomics in the post-ENCODE era, specifically what is the criteria for functionality
-   \item Collection of mouse full length cDNAs by the FANTOM consortium revealed many transcripts of unknown function (TUFs)
-   \item 38.6\% of the FANTOM3 mouse full-length cDNAs have very low coding potential (CPAT coding probability of less than 0.2) (Figure ~\ref{fig:fantom3_coding_prob})
-   \item The technologies that allowed full length cDNA sequencing
-   \item PacBio sequencing has read lengths greater than 10kb and can be used for full length cDNA sequencing
+SAGE\cite{pmid9008165}.
 
-\end{itemize}
+RNA-Seq offers an unbiased view of the transcriptome since it does not rely on any genomic annotations, which has led to the discovery of previously non-annotated transcripts.
+
+Tiling arrays and full length cDNA sequencing suggested that most of the genome is transcribed
+
+
+Catalogue of transcribed sequences such as the collection of mouse full length cDNAs by the FANTOM consortium revealed many transcripts of unknown function (TUFs)\cite{pmid16141072}. 38.6\% of the FANTOM3 mouse full-length cDNAs have very low coding potential (CPAT coding probability of less than 0.2) (Figure ~\ref{fig:fantom3_coding_prob})
 
 \begin{figure}[!ht]
    \centering
