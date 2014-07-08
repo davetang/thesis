@@ -17,11 +17,19 @@ Parkinson’s disease (PD) is a slowly progressive disease in which dopamine neu
 
 Starting RNA amount required by different protocols and it may not be possible obtain sufficient amounts of starting material. Thus PCR-based techniques are popular and are able to amplify RNA isolated from single cells. This leads to less heterogeneity compared to techniques that pool cells, which may have very different expression profiles. It is important to obtain a true profile of transcription in cells.
 
+PCR amplification is necessary for fluorescent-based imaging.
+
+PCR bias from GC and AT frequencies.
+
 DNA sequences do not exist as naked DNA \textit{in vivo}, but are usually packaged in higher order DNA structures thus \textit{in vitro} models may not recapitulate the entire story.
 
-poly-A versus random primers
-cytoplasmic versus nuclear enrichment
-CAGE versus RNA-seq
+\begin{itemize}
+   \item poly-A versus random primers
+   \item cytoplasmic versus nuclear enrichment
+   \item CAGE versus RNA-seq
+   \item linker ligation bias
+   \item barcode bias
+\end{itemize}
 
 \subsection{Signal versus noise}
 
@@ -31,6 +39,8 @@ The random sampling of lowly expressed versus highly expressed transcripts.
 
 Expression profiles from sample of cells versus single cell.
 
+Measures in variability - relative standard errors - overdispersion.
+
 \subsection{Coding versus non-coding transcripts}
 
 Transcripts of Unknown Function (TUFs)
@@ -39,6 +49,11 @@ The role of repetitive elements in the genome
 
 \subsection{Transcriptome profiling using CAGE}
 
-Unbiased profiling of total transcripts
-Comparison with different environmental conditions
-Gene ontology enrichment
+\begin{itemize}
+   \item Unbiased profiling of total transcripts
+   \item Comparison with different environmental conditions
+   \item Gene ontology enrichment
+   \item CAGE versus RNA-Seq versus microarrays\cite{pmid24676093}
+   \item Inaccuracies of gene models
+   \item template-free activity of reverse transcriptase, leads to an additional G nucleotide to the 5' end
+\end{itemize}
