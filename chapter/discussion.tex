@@ -1,6 +1,30 @@
+\subsection{Studying the transcriptome}
+
 The purpose of transcriptomics is to survey the full complement of RNAs in a specific sample or under a specific condition. Microarrays were one of the first commerically available technologies that allowed the simultaneous profiling of thousands of transcripts. The next major advance in transcriptomics was with RNA-Seq, which was hailed as a revolutionary tool\cite{pmid19015660}. This was primarily due to its discovery potential and quantitativeness in measuring transcript expression. RNA-Seq led to the discovery of numerous new classes of non-coding RNAs, new isoforms, etc.
 
-However, RNA-Seq is still in its infancy compared with microarrays. Therefore.
+The primary aim of transcriptomics is to capture the expression patterns of the full set of transcripts in a cell or tissue. However, technical and biological variances cause fluctuations in the measurements, which is referred to as noise. Technical variation may result from the sequencing technology and from carrying out the experimental protocol; this type of noise is predictable and follows a Poisson distribution. Biological variation arises from the natural variability in different biological entities; this variation can be small for genetically identical samples or can be very large, such as in a heterogeneous sample such as blood. Biological variation may be due to biological processes that are not perfect such as noisy splicing, which increases the mRNA isoform diversity in human cells\cite{pmid21151575}. Other sources of noise may be from contamination, such as from genomic DNA.
+
+\begin{itemize}
+   \item Complex picture behind transcript expression, the products of the genome
+   \item Transcript versus gene (transcriptional units)
+   \item The proteome is not the entire story
+   \item Transcriptional activity in different cells and tissues due to the wide range of physiological, biochemical, and developmental differences between different cells and tissues
+   \item The number of transcripts can be quantified to get some idea of the level of transcript expression
+   \item Understanding transcriptional activity in relation to a specific cell type or to disease
+   \item Transcript information may reveal what genes permit stem cells to self renew and differentiate into different cells
+\end{itemize}
+
+\subsection{Methods for studying the transcriptome}
+
+DNA sequences do not exist as naked DNA \textit{in vivo}, but are usually packaged in higher order DNA structures thus \textit{in vitro} models may not recapitulate the entire story.
+
+\begin{itemize}
+   \item Classically gene libraries of all expressed genes (EST libraries) and full length cDNA sequencing (FANTOM1, FANTOM2, and FANTOM3)
+   \item Microarrays are a cost-effective platform for quantifying the expression of thousands of transcripts simultaneously
+   \item Apart from understanding which transcripts are expressed, expression profiling allows the molecular classification of diseases such as cancer, which can lead to the development of biomarker tests
+   \item Building gene networks from transcriptional profiles
+   \item The rise of RNA-Seq over microarrays
+\end{itemize}
 
 \begin{itemize}
    \item Are the majority of detected low-level transcription due to technical artifacts and/or background biological noise?
@@ -10,15 +34,26 @@ However, RNA-Seq is still in its infancy compared with microarrays. Therefore.
    \item PacBio sequencing has read lengths greater than 10kb and can be used for full length cDNA sequencing
 \end{itemize}
 
-\subsection{Experimental differences}
+However, RNA-Seq is still in its infancy compared with microarrays. Therefore.
 
-Starting RNA amount required by different protocols and it may not be possible obtain sufficient amounts of starting material. Thus PCR-based techniques are popular and are able to amplify RNA isolated from single cells. This leads to less heterogeneity compared to techniques that pool cells, which may have very different expression profiles. It is important to obtain a true profile of transcription in cells.
+\subsection{RNA sequencing}
 
-PCR amplification is necessary for fluorescent-based imaging.
+Starting RNA amount required by different protocols and it may not be possible obtain sufficient amounts of starting material. Thus PCR-based techniques are popular and are able to amplify RNA isolated from single cells. This leads to less heterogeneity compared to techniques that pool cells, which may have very different expression profiles. It is important to obtain a true profile of transcription in cells. PCR amplification is necessary for fluorescent-based imaging. PCR bias from GC and AT frequencies.
 
-PCR bias from GC and AT frequencies.
+Transcripts of Unknown Function (TUFs). The role of non-coding RNAs. The role of repetitive elements in the genome.
 
-DNA sequences do not exist as naked DNA \textit{in vivo}, but are usually packaged in higher order DNA structures thus \textit{in vitro} models may not recapitulate the entire story.
+Small non-coding RNAs have been implicated in many biological processes, such as messenger RNA regulation or transposon silencing. We identified a role of small non-coding RNAs in the DNA damage repair mechanism. The inactivation of dicer and drosha, which are required for the biogenesis of small RNAs, leads to a loss of DNA damage repair. We sequenced the small RNAs from cells that had induced DNA damage and found small RNAs arising from the vicinity of the DNA double-strand break. Importantly, synthetic small RNAs mimicking these small RNAs could drive the DNA damage response \cite{francia2012site}.
+
+\begin{itemize}
+   \item Reveals the complexity of the transcriptome
+   \item Discussion about sequencing depth and saturation
+   \item Debate between functional elements and junk DNA
+   \item Debate between low-level transcription, technical artifacts, and background
+   \item Difference in protocols and technologies leading to biases
+   \item Poly-A versus random primers (and discussion about randomness)
+   \item Cytoplasmic versus nuclear enrichment
+   \item CAGE versus RNA-Seq
+\end{itemize}
 
 \begin{itemize}
    \item poly-A versus random primers
@@ -27,30 +62,6 @@ DNA sequences do not exist as naked DNA \textit{in vivo}, but are usually packag
    \item linker ligation bias
    \item barcode bias
 \end{itemize}
-
-\subsection{Signal versus noise}
-
-The primary aim of transcriptomics is to capture the expression patterns of the full set of transcripts in a cell or tissue. However, technical and biological variances cause fluctuations in the measurements, which is referred to as noise. Technical variation may result from the sequencing technology and from carrying out the experimental protocol; this type of noise is predictable and follows a Poisson distribution. Biological variation arises from the natural variability in different biological entities; this variation can be small for genetically identical samples or can be very large, such as in a heterogeneous sample such as blood. Biological variation may be due to biological processes that are not perfect such as noisy splicing, which increases the mRNA isoform diversity in human cells\cite{pmid21151575}. Other sources of noise may be from contamination, such as from genomic DNA.
-
-The random sampling of lowly expressed versus highly expressed transcripts.
-
-Expression profiles from sample of cells versus single cell.
-
-Measures in variability - relative standard errors - overdispersion.
-
-\subsection{Bioinformatics data}
-
-The role of exploratory data analysis in the analysis of highly dimensional, messy, noisy, and biased data. These can be due to biological variation, measurement noise, biases from biological protocols or bioinformatic tools.
-
-Possible confounding effects
-
-\subsection{Coding versus non-coding transcripts}
-
-Transcripts of Unknown Function (TUFs)
-The role of non-coding RNAs
-The role of repetitive elements in the genome
-
-\subsection{Transcriptome profiling using CAGE}
 
 \begin{itemize}
    \item Unbiased profiling of total transcripts
@@ -61,6 +72,30 @@ The role of repetitive elements in the genome
    \item template-free activity of reverse transcriptase, leads to an additional G nucleotide to the 5' end
 \end{itemize}
 
-Small non-coding RNAs have been implicated in many biological processes, such as messenger RNA regulation or transposon silencing. We identified a role of small non-coding RNAs in the DNA damage repair mechanism. The inactivation of dicer and drosha, which are required for the biogenesis of small RNAs, leads to a loss of DNA damage repair. We sequenced the small RNAs from cells that had induced DNA damage and found small RNAs arising from the vicinity of the DNA double-strand break. Importantly, synthetic small RNAs mimicking these small RNAs could drive the DNA damage response \cite{francia2012site}.
+\subsection{Sequencing data}
+
+The random sampling of lowly expressed versus highly expressed transcripts. Expression profiles from sample of cells versus single cell. Measures in variability - relative standard errors - overdispersion. Possible confounding effects.
+
+The role of exploratory data analysis in the analysis of highly dimensional, messy, noisy, and biased data. These can be due to biological variation, measurement noise, biases from biological protocols or bioinformatic tools.
+
+\begin{itemize}
+   \item Highly dimensional, messy, noisy, and biased data
+   \item Confounding factors and analysis methods for dealing with sequencing data
+   \item Methods for the analysis are still currently being refined
+   \item Data normalisation and its importance
+   \item Alignment methods with respect to repetitive reads
+   \item Statistical testing relevant to sequencing data such as multiple testing correction
+\end{itemize}
+
+\subsection{Insights from RNA sequencing}
 
 Parkinson’s disease (PD) is a slowly progressive disease in which dopamine neurons in the substantia nigra degenerate undetected for years before clinical symptoms develop. The lack of clinical symptoms highlights the necessity of a laboratory test, such as an assay for biomarkers, which can correlate subjects with PD risk. We have profiled the RNAs in the whole blood sample of PD patients and age-matched controls using high-throughput deepCAGE sequencing. By comparing the RNA profiles between PD patients and controls, we aim to discover novel biomarkers that are present in whole blood, which may be further developed into a non-invasive clinical test for PD.
+
+\begin{itemize}
+   \item New classes of RNA
+   \item Bird’s-eye view of the transcriptome to understand global trends
+   \item Increase in piRNA expression due to lost of MeCP2
+   \item Up-regulation of hypoxia related genes leading to increase pluripotency
+   \item Studying the expression patterns of repetitive elements
+   \item Development of molecular signatures that can be used as biomarkers
+\end{itemize}
