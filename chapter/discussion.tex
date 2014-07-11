@@ -1,83 +1,61 @@
-\subsection{Studying the transcriptome}
+The primary aim of transcriptomics is to capture in an unbiased manner the full set of transcripts in a cell or tissue and their expression patterns\cite{pmid19015660}. Transcriptional activity is different amongst cells and tissues due to the wide range of physiological, biochemical, and developmental differences. In the work presented in this thesis, several different experimental protocols were used to capture the transcriptomes of different biological samples: nanoCAGE\cite{pmid20543846} (Chapter ~\ref{template_switching} and ~\ref{blood}), heliscopeCAGE\cite{pmid21596820} (Chapter ~\ref{repeat} and ~\ref{ccl2}), small RNA sequencing\cite{pmid20964636} (Chapter ~\ref{ddrna} and ~\ref{pirna}), and illuminaCAGE\cite{Takahashi2012} (Chapter ~\ref{blood}). The purpose of each study was to characterise and quantify the differences in transcript expression that drove and specified variation.
 
-The purpose of transcriptomics is to survey the full complement of RNAs in a specific sample or under a specific condition. Microarrays were one of the first commerically available technologies that allowed the simultaneous profiling of thousands of transcripts. The next major advance in transcriptomics was with RNA-Seq, which was hailed as a revolutionary tool\cite{pmid19015660}. This was primarily due to its discovery potential and quantitativeness in measuring transcript expression. RNA-Seq led to the discovery of numerous new classes of non-coding RNAs, new isoforms, etc.
+In an experimental setting, a single condition or phenomena is under study; for example, the investigation of the effects caused by a protein, such as CCL2 (Chapter ~\ref{ccl}). However, there are many conditions that cannot be controlled or are even unknown. For this particular reason, technical and biological replicates are used. Technical replicates are used to assess the amount of variability that is caused from technical aspects of the experiment. For example, in an early benchmark of RNA-Seq using the Solexa/Illumina sequencing technology, replicate sequencing runs on the same samples demonstrated that technical variations from sequencing were small\cite{pmid18550803}. The work in chapter ~\ref{template_switching}, demonstrated how varying technical aspects of an experiment (in this case the molecular barcode sequence), revealed an experimental biased caused by strand invasion\cite{Tang01022013}. Biological replicates are used to estimate the biological variation between samples that are either under or have the same condition. Biological variation arises from the natural variability inherit amongst different biological systems; this variation may be small for genetically identical samples or very large in heterogeneous samples such as blood (Chapter ~\ref{blood}). Biological processes are also known to be noisy, such as splicing, which increases the mRNA isoform diversity in human cells\cite{pmid21151575}. By using biological replicates as a reference, differences between the condition under study can be assessed. Differential expression is only significant if the conditional difference is sufficiently larger than the biological variation.
 
-The primary aim of transcriptomics is to capture the expression patterns of the full set of transcripts in a cell or tissue. However, technical and biological variances cause fluctuations in the measurements, which is referred to as noise. Technical variation may result from the sequencing technology and from carrying out the experimental protocol; this type of noise is predictable and follows a Poisson distribution. Biological variation arises from the natural variability in different biological entities; this variation can be small for genetically identical samples or can be very large, such as in a heterogeneous sample such as blood. Biological variation may be due to biological processes that are not perfect such as noisy splicing, which increases the mRNA isoform diversity in human cells\cite{pmid21151575}. Other sources of noise may be from contamination, such as from genomic DNA.
+The first indication of the importance of non-polyadenylated transcripts\cite{pmid4213457}.
 
-\begin{itemize}
-   \item Complex picture behind transcript expression, the products of the genome
-   \item Transcript versus gene (transcriptional units)
-   \item The proteome is not the entire story
-   \item Transcriptional activity in different cells and tissues due to the wide range of physiological, biochemical, and developmental differences between different cells and tissues
-   \item The number of transcripts can be quantified to get some idea of the level of transcript expression
-   \item Understanding transcriptional activity in relation to a specific cell type or to disease
-   \item Transcript information may reveal what genes permit stem cells to self renew and differentiate into different cells
-\end{itemize}
+Major portions of eukaryotic genomes are occupied by DNA sequences whose transcripts do not code for proteins. The historical use of poly-A tail selection for enriching mRNAs and removing rRNA contamination in RNA preparations has led to the under-sampling of non-polyadenylated transcripts. The use of random primers in the CAGE protocols, circumvents this bias and allows the capture of poly-A+ and poly-A- RNAs. To investigate the non-coding portion of the genome the CAGE technology was cruicial.
 
-\subsection{Methods for studying the transcriptome}
-
-DNA sequences do not exist as naked DNA \textit{in vivo}, but are usually packaged in higher order DNA structures thus \textit{in vitro} models may not recapitulate the entire story.
-
-\begin{itemize}
-   \item Classically gene libraries of all expressed genes (EST libraries) and full length cDNA sequencing (FANTOM1, FANTOM2, and FANTOM3)
-   \item Microarrays are a cost-effective platform for quantifying the expression of thousands of transcripts simultaneously
-   \item Apart from understanding which transcripts are expressed, expression profiling allows the molecular classification of diseases such as cancer, which can lead to the development of biomarker tests
-   \item Building gene networks from transcriptional profiles
-   \item The rise of RNA-Seq over microarrays
-\end{itemize}
-
-\begin{itemize}
-   \item Are the majority of detected low-level transcription due to technical artifacts and/or background biological noise?
-   \item Sequencing depth and sampling of RNA molecules; absolute transcript quantification will help (such as using unique molecule identifiers and non-PCR based methods)
-   \item Functional transcriptomics in the post-ENCODE era, specifically what is the criteria for functionality
-   \item The technologies that allowed full length cDNA sequencing
-   \item PacBio sequencing has read lengths greater than 10kb and can be used for full length cDNA sequencing
-\end{itemize}
-
-However, RNA-Seq is still in its infancy compared with microarrays. Therefore.
-
-\subsection{RNA sequencing}
+In the case of small RNA sequencing, RNAs are isolated by size and are directly sequenced after adaptor ligation.
 
 Starting RNA amount required by different protocols and it may not be possible obtain sufficient amounts of starting material. Thus PCR-based techniques are popular and are able to amplify RNA isolated from single cells. This leads to less heterogeneity compared to techniques that pool cells, which may have very different expression profiles. It is important to obtain a true profile of transcription in cells. PCR amplification is necessary for fluorescent-based imaging. PCR bias from GC and AT frequencies.
 
-Transcripts of Unknown Function (TUFs). The role of non-coding RNAs. The role of repetitive elements in the genome.
+\begin{itemize}
+   \item New classes of RNA
+   \item Bird’s-eye view of the transcriptome to understand global trends
+   \item Increase in piRNA expression due to lost of MeCP2
+   \item Up-regulation of hypoxia related genes leading to increase pluripotency
+   \item Studying the expression patterns of repetitive elements
+   \item Development of molecular signatures that can be used as biomarkers
+\end{itemize}
 
-Small non-coding RNAs have been implicated in many biological processes, such as messenger RNA regulation or transposon silencing. We identified a role of small non-coding RNAs in the DNA damage repair mechanism. The inactivation of dicer and drosha, which are required for the biogenesis of small RNAs, leads to a loss of DNA damage repair. We sequenced the small RNAs from cells that had induced DNA damage and found small RNAs arising from the vicinity of the DNA double-strand break. Importantly, synthetic small RNAs mimicking these small RNAs could drive the DNA damage response \cite{francia2012site}.
+Debate between functional elements and junk DNA
 
-Historical use of poly-A tail selection to remove rRNA contamination in RNA preparation has led to an under-sampling of non-polyadenylated transcripts. This is circumvented by the use of random primers (and discussion about randomness).
+Cytoplasmic versus nuclear enrichment. The complexity of nuclear transcripts determined by denaturation-renaturation experiments\cite{pmid5969070}
+
+CAGE versus RNA-Seq versus microarrays\cite{pmid24676093}
 
 Many ncRNA have low evolutionary conservation and are lowly transcribed, and have been dismissed as technical artifacts and/or background transcription that have no biological importance. Alternatively spliced lncRNA\cite{Johnsson2013}.
 
-\begin{itemize}
-   \item Reveals the complexity of the transcriptome
-   \item Discussion about sequencing depth and saturation
-   \item Debate between functional elements and junk DNA
-   \item Difference in protocols and technologies leading to biases
-   \item Cytoplasmic versus nuclear enrichment. The complexity of nuclear transcripts determined by denaturation-renaturation experiments\cite{pmid5969070}
-   \item CAGE versus RNA-Seq
-\end{itemize}
+Are the majority of detected low-level transcription due to technical artifacts and/or background biological noise? Discussion about sequencing depth and saturation. Targeted RNA sequencing reveals the deep complexity of the human transcriptome\cite{pmid22081020}.
+
+Functional transcriptomics in the post-ENCODE era, specifically what is the criteria for functionality
 
 Validation of ncRNA by the use of chemically engineered antisense oligonucleotides, siRNA, shRNA-mediated approaches.
 
 Viable mouse with deletion of ultra-conserved regions\cite{pmid17803355} or Neat1\cite{pmid21444682}.
+
+\begin{itemize}
+   \item Complex picture behind transcript expression, the products of the genome
+   \item The number of transcripts can be quantified to get some idea of the level of transcript expression
+   \item Transcript information may reveal what genes permit stem cells to self renew and differentiate into different cells
+   \item Apart from understanding which transcripts are expressed, expression profiling allows the molecular classification of diseases such as cancer, which can lead to the development of biomarker tests
+   \item Building gene networks from transcriptional profiles
+   \item Sequencing depth and sampling of RNA molecules; absolute transcript quantification will help (such as using unique molecule identifiers and non-PCR based methods)
+\end{itemize}
+
+Transcripts of Unknown Function (TUFs). The role of non-coding RNAs. The role of repetitive elements in the genome.
+
+Small non-coding RNAs have been implicated in many biological processes, such as messenger RNA regulation or transposon silencing. We identified a role of small non-coding RNAs in the DNA damage repair mechanism. The inactivation of dicer and drosha, which are required for the biogenesis of small RNAs, leads to a loss of DNA damage repair. We sequenced the small RNAs from cells that had induced DNA damage and found small RNAs arising from the vicinity of the DNA double-strand break. Importantly, synthetic small RNAs mimicking these small RNAs could drive the DNA damage response \cite{francia2012site}.
 
 Epigenetic roles such as guiding chromatin-modifying enzymes to their sites of action or acting as scaffolds.
 
 Rise of regulatory RNA\cite{Morris2014}.
 
 \begin{itemize}
-   \item poly-A versus random primers
-   \item cytoplasmic versus nuclear enrichment
-   \item CAGE versus RNA-seq
-   \item linker ligation bias
-   \item barcode bias
-\end{itemize}
-
-\begin{itemize}
    \item Unbiased profiling of total transcripts
    \item Comparison with different environmental conditions
    \item Gene ontology enrichment
-   \item CAGE versus RNA-Seq versus microarrays\cite{pmid24676093}
    \item Inaccuracies of gene models
    \item template-free activity of reverse transcriptase, leads to an additional G nucleotide to the 5' end
 \end{itemize}
@@ -101,11 +79,3 @@ The role of exploratory data analysis in the analysis of highly dimensional, mes
 
 Parkinson’s disease (PD) is a slowly progressive disease in which dopamine neurons in the substantia nigra degenerate undetected for years before clinical symptoms develop. The lack of clinical symptoms highlights the necessity of a laboratory test, such as an assay for biomarkers, which can correlate subjects with PD risk. We have profiled the RNAs in the whole blood sample of PD patients and age-matched controls using high-throughput deepCAGE sequencing. By comparing the RNA profiles between PD patients and controls, we aim to discover novel biomarkers that are present in whole blood, which may be further developed into a non-invasive clinical test for PD.
 
-\begin{itemize}
-   \item New classes of RNA
-   \item Bird’s-eye view of the transcriptome to understand global trends
-   \item Increase in piRNA expression due to lost of MeCP2
-   \item Up-regulation of hypoxia related genes leading to increase pluripotency
-   \item Studying the expression patterns of repetitive elements
-   \item Development of molecular signatures that can be used as biomarkers
-\end{itemize}
