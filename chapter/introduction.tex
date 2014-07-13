@@ -97,9 +97,7 @@ RNA sequencing (RNA-Seq) is an application of next-gen sequencing used to catalo
 
 \subsection{Cap Analysis Gene Expression}
 
-Cap Analysis Gene Expression (CAGE) was initially conceived as an idea of profiling all active promoters and TFs for understanding the interplay between the two\cite{carninci2010capanalysis}. CAGE uses a molecular technique known as Cap-Trapper\cite{pmid8938445,pmid9179497}, which allows the capturing of all RNAs that have a cap structure and are subsequently sequenced (Figure ~\ref{fig:cage_protocol}). CAGE tags represent the 5' end of RNA and identify TSSs on a genome-wide scale. CAGE tag counts can also be used to estimate the cellular concentration of a particular RNA, which is used as a proxy for its expression level. In the FANTOM3 project, CAGE unveiled the transcriptional landscape in mammalian genomes\cite{pmid16141072}, which identified many novel mRNAs and non-coding RNAs not previously characterised. Furthermore, CAGE revealed two major classes of promoters: conserved TATA box-enriched promoters and CpG-rich promoters\cite{pmid16645617}. CAGE has also been used in the FANTOM4\cite{pmid19377474} and FANTOM5\cite{pmid24670764} projects, and in ENCODE\cite{pmid17571346, pmid22955620}.
-
-Two variants of CAGE include nanoCAGE\cite{pmid20543846} and HeliScopeCAGE\cite{pmid21596820}. NanoCAGE utilises the template-switching method\cite{pmid11314272} instead of Cap-Trapper and allows for smaller starting amounts of RNA, to the level of RNA content in single cells. HeliScopeCAGE utilises Cap-Trapper but without the enzymatic tag cleavage and PCR amplification, and the capped 5' ends of the cDNA are directly sequenced on the HeliScope sequencer.
+Cap Analysis Gene Expression (CAGE) was initially conceived as an idea of profiling all active promoters and TFs for understanding the interplay between the two\cite{carninci2010capanalysis}. CAGE uses a molecular technique known as Cap-Trapper\cite{pmid8938445,pmid9179497}, which allows the capturing of all RNAs that have a cap structure, which are subsequently sequenced (Figure ~\ref{fig:cage_protocol}). Each CAGE tag represents the 5' end of an RNA and the tag counts are used as a proxy for estimating the cellular concentration of a RNA, i.e. its expression level. One of the major findings made by CAGE was that not all transcription initiation events occurred at a single position\cite{pmid16645617}. While the classical TATA-box promoters mostly initiated from a single position, promoters that were CG-rich (and in particular CpG islands) showed initiation events in a broad manner; these findings were consistent in human and mouse\cite{pmid16645617}. In addition, this initial CAGE study, which was part of the FANTOM3 project, provided a survey of the transcriptional landscape of mammalian genomes and identified many novel mRNAs and non-coding RNAs that were not previously characterised\cite{pmid16141072}. As part of the FANTOM4 project CAGE was adopted to work with the 454 Life Sciences sequencer and was used to profile TSS usage throughout a time course. The latest FANTOM project, FANTOM5, used CAGE with a single molecule sequencer, to profile a large panel of mammalian primary cells, tissues, and cell lines\cite{pmid24670764}. CAGE was also used as part of the ENCODE project to study subcellular localisation of RNAs\cite{pmid22955620}.
 
 \begin{figure}[!ht]
    \centering
@@ -108,15 +106,11 @@ Two variants of CAGE include nanoCAGE\cite{pmid20543846} and HeliScopeCAGE\cite{
    \label{fig:cage_protocol}
 \end{figure}
 
-\subsection{Transcriptome studies}
+Two variants of CAGE include nanoCAGE\cite{pmid20543846} and HeliScopeCAGE\cite{pmid21596820}; the latter variant was specifically developed and used for the FANTOM5 project. Briefly, nanoCAGE utilises the template-switching method\cite{pmid11314272} instead of Cap-Trapper for the capture the TSS of RNAs. Template-switching allows a simplification of the CAGE protocol and requires a much smaller amount of starting RNA, to the level of RNA content present in single cells (10 picogram/cell). HeliScopeCAGE utilises Cap-Trapper but without the enzymatic tag cleavage and PCR amplification, and the capped 5' ends of the cDNA are directly sequenced on the HeliScope sequencer. The automation of HeliScopeCAGE\cite{pmid22303458} allowed the large panel of samples to be sequenced for the FANTOM5 project.
 
-SAGE\cite{pmid9008165}.
-
-Tiling arrays massive transcription from chromosomes 21 and 22.
+\subsection{Non-coding RNAs}
 
 RNA-Seq offers an unbiased view of the transcriptome since it does not rely on any genomic annotations, which has led to the discovery of previously non-annotated transcripts.
-
-Tiling arrays and full length cDNA sequencing suggested that most of the genome is transcribed.
 
 Catalogue of transcribed sequences such as the collection of mouse full length cDNAs by the FANTOM consortium revealed many transcripts of unknown function (TUFs)\cite{pmid16141072}. 38.6\% of the FANTOM3 mouse full-length cDNAs have very low coding potential (CPAT coding probability of less than 0.2) (Figure ~\ref{fig:fantom3_coding_prob})
 
@@ -126,8 +120,6 @@ Catalogue of transcribed sequences such as the collection of mouse full length c
    \caption[Coding probability of FANTOM3 mouse cDNAs]{Distribution of coding probabilities of FANTOM3 mouse full-length cDNAs as predicted by CPAT\cite{tang2014fantom3codingprob}.}
    \label{fig:fantom3_coding_prob}
 \end{figure}
-
-\subsection{Non-coding RNAs}
 
 Half of interrogated loci harboured an open reading frame FANTOM2\cite{pmid12466851}
 
