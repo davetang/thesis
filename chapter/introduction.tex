@@ -154,11 +154,31 @@ With the arrival of next-gen sequencing, the SAGE and CAGE methods were adapted 
 
 \section{Transcriptional complexity}
 
-Several landmark studies have revealed that the transcriptional landscape is much more complex than previously anticipated. The functional annotation of the mammalian genome (FANTOM) project, which began as an initiative to sequence and functionally annotate mouse full-length complementary DNA (cDNA)\cite{pmid11217851}, revealed that the transcriptome was dominated by transcripts that had no apparent coding potential\cite{pmid12466851}. The FANTOM consortium also revealed massive antisense transcription\cite{pmid16141073}, which is transcription arising from the strand opposite the sense strand, and extensive alternative promoter usage\cite{pmid16141072}. Tiling arrays, which are microarrays designed to interrogate a genome at evenly spaced intervals, revealed that a large fraction of genomic bases were transcribed\cite{pmid15539566, pmid11988577, pmid15790807}. The tiling array studies gave rise to the phenomenon known as pervasive transcription, which refers to the observation that a large percentage of mammalian genomes are transcribed\cite{pmid17510325}. The Encyclopedia of DNA elements (ENCODE) project\cite{pmid17571346, pmid22955616} began as an endeavour to identify all functional elements in the human genome sequence by employing the use of various genome-wide biochemical assays. The conclusions from ENCODE were in line with the observation that mammalian genomes are pervasively transcribed and were based on multiple lines of evidence\cite{pmid17571346, pmid22955616}. Taken together, these studies have concluded that the transcriptional landscape is highly complex, i.e. the system is composed of many components, producing many transcripts of unknown function (TUFs), since these transcription products do not overlap known genes.
+Several landmark studies have revealed that the transcriptional landscape is much more complex than previously anticipated. The functional annotation of the mammalian genome (FANTOM) project, which began as an initiative to sequence and functionally annotate mouse full-length complementary DNA (cDNA)\cite{pmid11217851}, revealed that the transcriptome was dominated by transcripts that had no apparent coding potential\cite{pmid12466851}. The FANTOM consortium also revealed massive antisense transcription\cite{pmid16141073}, which is transcription arising from the strand opposite the sense strand, and extensive alternative promoter usage\cite{pmid16141072}. Tiling arrays, which are microarrays designed to interrogate a genome at evenly spaced intervals, revealed that a large fraction of genomic bases were transcribed\cite{pmid15539566, pmid11988577, pmid15790807}. The tiling array studies gave rise to the phenomenon known as pervasive transcription, which refers to the observation that a large percentage of mammalian genomes are transcribed\cite{pmid17510325}. The Encyclopaedia of DNA elements (ENCODE) project\cite{pmid17571346, pmid22955616} began as an endeavour to identify all functional elements in the human genome sequence by employing the use of various genome-wide biochemical assays. The conclusions from ENCODE were in line with the observation that mammalian genomes are pervasively transcribed and were based on multiple lines of evidence\cite{pmid17571346, pmid22955616}. Taken together, these studies have concluded that the transcriptional landscape is highly complex, i.e. the system is composed of many components, producing many transcripts of unknown function (TUFs), since these transcription products do not overlap known genes.
 
 \subsection{The definition of a gene}
 
-The observation that the genome is pervasively transcribed has led to the proposal that that the definition of a gene needs to be revisited\cite{pmid17567988}. The idea of a gene dates back to Gregor Mendel and his plant breeding experiments that demonstrated that discrete traits could be inherited from parents to offspring. In 1941, George Beadle and Edward Tatum observed that mutations in Neurospora genes would cause defects in different steps of metabolic pathways\cite{Beadle15111941} and this established that genes directed the synthesis of enzymes. This became known as the ``one gene, one polypeptide" hypothesis, where each gene was responsible for producing a single protein in a biochemical pathway. After the determination of the genetic code (see section~\ref{sec:central_dogma}), a gene was recognised as a stretch of DNA that coded for a protein in an open reading frame (ORF). The discovery of introns\cite{pmid890740,pmid922889}, altered the ORF concept, in that genes were now composed of both protein-coding regions (exons) and the non-coding regions (introns). The discovery of non-coding RNAs, such as miRNAs\cite{pmid8252621} and piRNAs\cite{pmid11470406}, meant that genes not only code for proteins. It is clear that the definition of a gene has evolved with our increasing knowledge of genetics, molecular biology, and biochemistry. It has recently been suggested that in light of the results of ENCODE, that the definition of a gene needs to be further redefined\cite{pmid17567988}. The proposed definition is that ``A gene is a union of genomic sequences encoding a coherent set of potentially overlapping functional products"\cite{pmid17567988}. This definition fits in nicely with the idea of a transcriptional unit, proposed by the FANTOM consortium{pmid12466851}, which is a segment of the genome from which transcripts are generated and share a common core of genetic information.
+The observation that the genome is pervasively transcribed has led to the proposal that the definition of a gene needs to be revised\cite{pmid17567988}. The idea of a gene dates back to Gregor Mendel and his plant breeding experiments that demonstrated that discrete traits could be inherited from parents to offspring. However it was Wilhelm Johannsen who is often credited as the person who coined the word gene to describe the Mendelian units of heredity in 1909. The ``one gene, one polypeptide" hypothesis was later proposed in 1941 after observing that mutations in Neurospora genes would cause defects in different steps of metabolic pathways\cite{Beadle15111941}. This hypothesis states that genes were responsible for producing a single protein in a biochemical pathway. After the determination of the genetic code (see section~\ref{sec:central_dogma}), a gene was recognised as a stretch of DNA that coded for a protein in an open reading frame (ORF). The discovery of introns\cite{pmid890740,pmid922889}, altered the ORF concept, in that genes composed of both protein-coding regions (exons) and the non-coding regions (introns). There was a protein-centric definition of genes, despite knowing that not all genes encode proteins, such as tRNAs and rRNAs. The discovery of other classes of non-coding RNAs, such as miRNAs\cite{pmid8252621} and piRNAs\cite{pmid11470406}, further demonstrated that not all genes code proteins.
+
+The ENCODE consortium has recently proposed this definition: ``A gene is a union of genomic sequences encoding a coherent set of potentially overlapping functional products"\cite{pmid17567988}. This definition is similar to the idea of a transcriptional unit (TU), which was proposed by the FANTOM consortium{pmid12466851}. A TU is a segment of the genome that can generate transcripts and share a common core of genetic information. These two definitions reflect on the observation that a single loci can give rise to various transcripts, however, the ENCODE definition includes a criteria of functionality. 
+
+\subsection{Ascribing function}
+
+Various criteria have been used as a criteria for functionality, in contrast to noise, in transcriptional products; these can be broadly separated into \textit{in silico} and experimental validations. \textit{In silico} methods are based on analysing properties associated with an expressed transcript. The expression strength is a commonly used criteria, as consistently captured signal is less likely to occur just by chance, i.e. the smaller the margin of error with an increase in signal. Context-specific transcription, such as observed expression at a specific time-point, developmental stage, or tissue type, can also be used to support function. The argument is such that a random transcript would not become active under a specific condition. However, the criteria of context-specific expression patterns can be countered by the fact that different cell types and during different developmental stages, express a specific repertoire of transcription factors and are under certain circumstances that would lead to the context-specific transcription. Sequence conservation is usually used to support functionality, as this is evidence for purifying or negative selection. For example, protein-coding genes are typically very well conserved among different organisms. Lastly, transcriptional data is typically shown in conjunction with other genome-wide assays.
+
+Typically experiments are required for validating computational predictions. Transcript expressions are validated by qRT-PCR.
+
+\begin{itemize}
+   \item Experimental manipulation
+   \item Observable phenotypic change with experimental manipulation
+   \item Molecular assays
+   \item Reporter-gene assays, such as placing putative regulatory sequences upstream of a reporter gene
+   \item Tissue or intracellular localisation of transcripts can be determined using RNA FISH
+   \item Biological assays
+   \item assay how a genetic element produces a measurable phenotypic effect by the
+   \item Use of cell lines to knockdown or transfect cells with a specific transcript
+   \item Use of animal models to knock-out or knock-in transcripts
+\end{itemize}
 
 \subsection{Non-coding RNAs}
 
@@ -175,8 +195,6 @@ High-throughput methods of transcriptome analysis such as RNA-Seq have also reve
 
 The most well studied class of short ncRNAs are the micro-RNAs (miRNAs), which were first observed in Caenorhabditis elegans\cite{pmid8252621}. MiRNAs are typically 20-24 nucleotides in length and functions as regulators of expression by base-pairing with complementary sequences within mRNAs (commonly to the 3' untranslated region (UTR)). The biogenesis of miRNAs begins transcription of the miRNA gene by Pol II or Pol III, which forms the primary miRNA (pri-miRNA). The pri-miRNA is cleaved by an enzyme called Drosha\cite{pmid14508493} to produce a characteristic stem-loop structure of about 70 bps, known as the precursor miRNA (pre-miRNA). The pre-miRNA is then exported into the cytoplasm and is further cleavage by an enzyme called Dicer\cite{pmid11201747}, producing the mature miRNA. Another class of well known short ncRNAs are the Piwi-interacting RNA (piRNA), which were first observed in drosophila\cite{pmid11470406}. PiRNA are typically between 24 and 32 nucleotides long and are thought to be involved in gene silencing, especially in silencing transposable elements (TEs), by forming the piRNA-induced silencing complex (piRISC). The sequence of many piRNAs are antisense to transposon sequences because they are actually derived from TEs. In fact when they were first discovered in drosophila, they were termed repeat-associated small interfering RNAs (rasiRNA). One theory of piRNA biogenesis states that piRNAs are processed from single-stranded RNA precursors coming from particular intergenic repetitive elements, such as TEs\cite{pmid21427766}.
 
-\subsection{Ascribing function}
-
 Sequencing-based techniques for transcriptome profiling sample RNAs from a population of RNAs.
 
 Is it RNA polymerase II randomly colliding with open chromatin regions?
@@ -192,32 +210,6 @@ Using deep sequencing (deepCAGE), the FANTOM4 study measured the genome-wide dyn
 
 Two variants of CAGE include nanoCAGE\cite{pmid20543846} and HeliScopeCAGE\cite{pmid21596820}; the latter variant was specifically developed and used for the FANTOM5 project. Briefly, nanoCAGE utilises the template-switching method\cite{pmid11314272} instead of Cap-Trapper for capturing the TSS of RNAs. Template-switching allows a simplification of the CAGE protocol and requires a much smaller amount of starting RNA, to the level of RNA content present in single cells (10 picogram/cell). HeliScopeCAGE utilises Cap-Trapper but without the enzymatic tag cleavage and PCR amplification, and the capped 5' ends of the cDNA are directly sequenced on the HeliScope sequencer. The automation of HeliScopeCAGE\cite{pmid22303458} allowed the large panel of samples to be sequenced for the FANTOM5 project.
 
-Common criteria for ascribing function
-
-\begin{itemize}
-   \item Context-specific transcription
-   \item A random transcript would not become active under a specific condition
-   \item Tissue specificity
-   \item Developmental stage specificity
-   \item Stimulus-specific activation, such as in response to stress
-   \item Positional information
-   \item Proximity of DNA sequences to significant sites, such as to known protein-coding transcripts, implies a regulatory role
-   \item Sequence conservation
-   \item Instances of conservation are evidence of purifying selection
-   \item Experimental manipulation
-   \item Observable phenotypic change with experimental manipulation
-   \item The observation of context-specific expression patterns as a criteria for function can be countered by the fact that:
-   \item Different transcription factors are present in different cell types and at different stages of development.
-   \item The accessibility of different parts of the genome vary from cell type to cell type and at different kinds of development.
-   \item Molecular assays
-   \item Transcript expression can be assayed using qRT-PCR
-   \item Reporter-gene assays, such as placing putative regulatory sequences upstream of a reporter gene
-   \item Tissue or intracellular localisation of transcripts can be determined using RNA FISH
-   \item Biological assays
-   \item assay how a genetic element produces a measurable phenotypic effect by the
-   \item Use of cell lines to knockdown or transfect cells with a specific transcript
-   \item Use of animal models to knock-out or knock-in transcripts
-\end{itemize}
 
 \section{Repetitive mammalian genomes}
 
