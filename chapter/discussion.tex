@@ -1,76 +1,24 @@
-The research goal of this thesis was to study the transcriptional output of biological systems under various conditions. The transcriptional output was quantified using various transcriptome profiling methods including Cap Analysis Gene Expression (CAGE), nanoCAGE, and small RNA sequencing. These methods provide unbiased profiling, in that all transcripts in an enriched transcript population can be sampled.
+The work carried out as part of this thesis had the underlying goal of interpreting the transcriptional output from various biological systems. In the various studies, different transcriptome profiling methods employing the use of high-throughput sequencers were used to quantify the expression of transcripts. These methods provided unbiased profiling, as \textit{a priori} knowledge is not required,, and provides a better quantification of transcript expression. However the interpretation of transcriptional output is a complex problem due to the various components that affect the output; these fall broadly into two categories: technical and biological variation. In order to assess the biological variation, technical variations such as experimental noise and biases must be accounted for or removed. While technical variation is predictable, biological variation is much harder to assess\cite{pmid22769017}.
 
-The transcriptome varies with particular cell or tissue types and reflects the transcripts that are actively expressed at a given time. The primary aim of transcriptomics is to capture the full set of transcripts and to study their expression.
+The identification of artefacts and biases is important prior to the analysis of data and while tools\cite{pmid19737799, fastqc} are available for performing quality control, they are unable to deal with idiosyncratic biases from specific protocols. In chapter ~\ref{template_switching} we demonstrated a particular type of bias that was introduced with the use of molecular barcodes. DNA barcodes are easily introduced by modifying the sequences of primers or linkers and are usually used to allow different RNA sources to be pooled at an early stage of sample preparation. This has two main benefits in that the starting material is increased and different samples can be sequenced on a single flowcell. However, we observed that the efficiency of primer annealing was dependent on the barcode sequence that was chosen\cite{Tang01022013}, creating a barcode bias. Furthermore, we noticed a particular type of artefact that was produced with the template-switching step in the experimental protocol\cite{Tang01022013}. Specifically, these template-switching artefact, which are a result of strand invasion, interrupted the process of reverse transcription when the cDNA has increased sequence complementary to the template-switching primer. We developed a computational method to remove these artefacts and improved the experimental protocol.
 
-The purpose of each study was to characterise and quantify the differences in transcript expression that drove and specified variation.
+There have been several surprises in the genomics field since the completion of the draft human genome sequence \cite{lander2001initial,venter2001sequence}. The first was the number of genes in the genome, which many genome biologists had overestimated\cite{genesweep}. However, it should be pointed out that this was not a surprise to some; based on theories of mutational load, Susumu Ohno had correctly predicted that the number of functional loci to be under 30,000\cite{pmid5065367}. The next surprise was the observation that most of the genome was transcribed\cite{pmid11988577, pmid17571346}, which became known as pervasive transcription. There were claims that the genome is not as pervasively transcribed as suggested by tiling arrays\cite{pmid20502517}, however this has been robustly reproduced using various transcriptome profiling methods\cite{pmid22955620}. The question is whether products of pervasive transcription are functional or not, especially given the low fidelity of RNA polymerase II\cite{pmid17277804}. Ultimately, the test for functionality will rely on detailed experiments that investigate individual targets.
 
-A reoccurring theme in several large scale projects examining transcriptional output, such as ENCODE and FANTOM, is that mammalian genomes are pervasively transcribed and that new unexpected genome features are continually being discovered. 
+A reoccurring theme in large scale transcriptome projects using unbiased high-throughput technologies is the discovery of unexpected genome features, such as new species of RNAs. In chapter ~\ref{ddrna}, we discovered a new class of RNAs involved with the DNA damage response (DDR), which we christened as DDRNAs\cite{francia2012site}. These RNAs were independently discovered by another group, who named them diRNAs\cite{pmid22445173}. The DDR is a coordinated set of events that repairs lesions in DNA; the DNA break is detected by specialised factors that initiates a signalling cascade from the site of DNA damage\cite{pmid19847258}. We showed that the DDR is sensitive to RNase A treatment and that Dicer and Drosha products can restore the DDR in RNase A treated cells. We performed small RNA sequencing on cells with an exogenous locus that can be induced to be cut, mimicking DNA damage, to discover the DDRNAs. The DDRNAs were produced from the site of DNA damage but were captured in a limited quantity, which suggests either that they are lowly expressed, or quickly degraded after DNA repair. In order to demonstrate that DDRNAs were either not products of degradation or spurious transcription, we showed that they had size and nucleotide profiles that were different from other classes of small RNAs. Furthermore, when these DDRNAs were either chemically synthesised or generated \textit{in vitro}, the DDR in RNase A treated cells could be restored.
 
-The results from this work corroborates with these previous observations and furthermore 
+Major portions of eukaryotic genomes are occupied by repetitive DNA sequences, which mainly consists of transposable elements (TEs). The presence of TEs has impacted the human genome in various ways such as generating insertion mutations and genomic instability\cite{pmid19763152,pmid11700292} to shaping gene regulatory systems\cite{pmid18368054}; in fact it was proposed that TEs still pervade in genomes because they are a rich source of genetic material\cite{pmid18368054}. In chapter ~\ref{repeat}, we quantified the transcriptional output arising from repetitive elements to investigate their contribution to the transcriptome. As previously reported, transcription initiating within TEs is more tissue-specific with lower expression levels than protein-coding transcripts\cite{pmid19377475}. However, we observed that specific families of repeats were enriched in particular cell types.
 
-Several surprises were revealed with the completion of the draft genome sequence, which included the low number of genes and that the majority of the human genome was made up of repetitive elements. Two large scale consortium projects, namely ENCODE and FANTOM,  aimed to characterise the functional products of the human genome, which is much more dynamic among different cell types and tissues. One of the main findings of the ENCODE project was that the human genome is pervasively transcribed, i.e. a large portion of the genome is being transcribed into RNA. The FANTOM project, which began as a project characterising mouse full-length cDNAs, revealed that mammalian genomes are much more complex than previously appreciated. The advent of next-generation sequencing allowed entire collections of RNA to be sequenced, in an application known as RNA-Seq. Next-gen sequencing complemented tag-based methods such as CAGE, SAGE, and PET well and transformed these technologies.
+The classical view of transcription initiation was that transcription began at a single position at TA-rich regions known as the TATA-box. One of the major findings made using the CAGE technology was that not all transcription initiation events occurred at a single position\cite{pmid16645617}. While the classical TATA-box promoters mostly initiated from a single position (which were termed sharp promoters), promoters that were CG-rich (in particular CpG islands) showed initiation events across a stretch of sequence (these were termed broad promoters). Initially these CAGE tags were thought to be noise, however, these TSSs were highly consistent in orthologous mouse and human promoters, and sharp and broad promoters were consistently detected in various libraries\cite{pmid16645617}. In addition, this initial survey of the transcriptional landscape in mammalian genomes identified many novel mRNAs and non-coding RNAs that had not been previously characterised\cite{pmid16141072}. CAGE has also been applied to study the dynamics of TSS usage throughout a time course of growth arrest and differentiation\cite{pmid19377474}.
 
-Rapid degradation of small RNAs by the exosome.
+\cite{pmid25218058}.
 
-If our assumption is correct, there's one other feature of the spurious transcription that must be observed: the transcription will be cell specific or developmentally regulated. This is because different transcription factors are present in different cell types and at different stages of development. It's also because the accessibility of different parts of the genome vary from cell type to cell type and at different kinds of development. This is the transition from "open" chromatin to a "closed" version resembling heterochromatin.
+Kelly\cite{pmid23181609}.
 
-Data interpretation and the limitation of CAGE, which is that we do not know the length of the transcripts.
-
-Revisiting previous hypotheses but on a genome-wide scale.
-
-\section{Common criteria for identifying functions in non-mobile genetic elements}
-
-\subsection{Context-specific transcription}
-
-One criterion used to suggest function is context specificity of an RNA transcript. This includes tissue specificity, developmental stage specificity, or stimulus-specific activation, such as in response to stress.
-
-\subsection{Positional information}
-
-The underlying assumption is that the proximity of sequences to structurally significant sites implies a regulatory role
-
-Definition of a promoter in light of CAGE.
-
-Begin with a restatement of your research question, followed by a statement about whether or not, and how much, your findings "answer" the question. These should be the first two pieces of information the reader encounters. Relate your findings to the issues you raised in the introduction. Note similarities, differences, common or different trends.  Show how your study either corraborates, extends, refines, or conflicts with previous findings. Speculate. You will discuss how the hypothesis has been demonstrated by the new research and then show how the field's knowledge has been changed by the addition of this new data. While the introduction starts generally and narrows down to the specific hypothesis, the discussion starts with the interpretation of the results, then moves outwards to contextualize these findings in the general field.
-
-In an experimental setting, a single condition or phenomena is under study; for example, the investigation of the effects caused by a protein, such as CCL2 (Chapter ~\ref{ccl}). However, there are many conditions that cannot be controlled or are even unknown. For this particular reason, technical and biological replicates are used. Technical replicates are used to assess the amount of variability that is caused from technical aspects of the experiment. For example, in an early benchmark of RNA-Seq using the Solexa/Illumina sequencing technology, replicate sequencing runs on the same samples demonstrated that technical variations from sequencing were small\cite{pmid18550803}. The work in chapter ~\ref{template_switching}, demonstrated how varying technical aspects of an experiment (in this case the molecular barcode sequence), revealed an experimental biased caused by strand invasion\cite{Tang01022013}. Biological replicates are used to estimate the biological variation between samples that are either under or have the same condition. Biological variation arises from the natural variability inherit amongst different biological systems; this variation may be small for genetically identical samples or very large in heterogeneous samples such as blood (Chapter ~\ref{blood}). Biological processes are also known to be noisy, such as splicing, which increases the mRNA isoform diversity in human cells\cite{pmid21151575}. By using biological replicates as a reference, differences between the condition under study can be assessed. Differential expression is only significant if the conditional difference is sufficiently larger than the biological variation.
-
-The first indication of the importance of non-polyadenylated transcripts\cite{pmid4213457}.
-
-Major portions of eukaryotic genomes are occupied by DNA sequences whose transcripts do not code for proteins. The historical use of poly-A tail selection for enriching mRNAs and removing rRNA contamination in RNA preparations has led to the under-sampling of non-polyadenylated transcripts. The use of random primers in the CAGE protocols, circumvents this bias and allows the capture of poly-A+ and poly-A- RNAs. To investigate the non-coding portion of the genome the CAGE technology was cruicial.
-
-In the case of small RNA sequencing, RNAs are isolated by size and are directly sequenced after adaptor ligation.
-
-Starting RNA amount required by different protocols and it may not be possible obtain sufficient amounts of starting material. Thus PCR-based techniques are popular and are able to amplify RNA isolated from single cells. This leads to less heterogeneity compared to techniques that pool cells, which may have very different expression profiles. It is important to obtain a true profile of transcription in cells. PCR amplification is necessary for fluorescent-based imaging. PCR bias from GC and AT frequencies.
-
-\begin{itemize}
-   \item New classes of RNA
-   \item Bird’s-eye view of the transcriptome to understand global trends
-   \item Increase in piRNA expression due to lost of MeCP2
-   \item Up-regulation of hypoxia related genes leading to increase pluripotency
-   \item Studying the expression patterns of repetitive elements
-   \item Development of molecular signatures that can be used as biomarkers
-\end{itemize}
-
-Debate between functional elements and junk DNA
-
-Cytoplasmic versus nuclear enrichment. The complexity of nuclear transcripts determined by denaturation-renaturation experiments\cite{pmid5969070}
-
-CAGE versus RNA-Seq versus microarrays\cite{pmid24676093}
-
-Many ncRNA have low evolutionary conservation and are lowly transcribed, and have been dismissed as technical artifacts and/or background transcription that have no biological importance. Alternatively spliced lncRNA\cite{Johnsson2013}.
-
-Are the majority of detected low-level transcription due to technical artifacts and/or background biological noise? Discussion about sequencing depth and saturation. Targeted RNA sequencing reveals the deep complexity of the human transcriptome\cite{pmid22081020}.
-
-Functional transcriptomics in the post-ENCODE era, specifically what is the criteria for functionality
-
-Validation of ncRNA by the use of chemically engineered antisense oligonucleotides, siRNA, shRNA-mediated approaches.
-
-Viable mouse with deletion of ultra-conserved regions\cite{pmid17803355} or Neat1\cite{pmid21444682}.
+The historical use of poly-A tail selection for enriching mRNAs and removing rRNA contamination in RNA preparations has led to the under-sampling of non-polyadenylated transcripts. The use of random primers in the CAGE protocols, circumvents this bias and allows the capture of poly-A+ and poly-A- RNAs. To investigate the non-coding portion of the genome the CAGE technology was cruicial.
 
 \begin{itemize}
    \item Complex picture behind transcript expression, the products of the genome
    \item The number of transcripts can be quantified to get some idea of the level of transcript expression
-   \item Transcript information may reveal what genes permit stem cells to self renew and differentiate into different cells
    \item Apart from understanding which transcripts are expressed, expression profiling allows the molecular classification of diseases such as cancer, which can lead to the development of biomarker tests   \item Building gene networks from transcriptional profiles
    \item Sequencing depth and sampling of RNA molecules; absolute transcript quantification will help (such as using unique molecule identifiers and non-PCR based methods)
 \end{itemize}
@@ -81,8 +29,6 @@ Small non-coding RNAs have been implicated in many biological processes, such as
 
 Epigenetic roles such as guiding chromatin-modifying enzymes to their sites of action or acting as scaffolds.
 
-Rise of regulatory RNA\cite{Morris2014}.
-
 \begin{itemize}
    \item Unbiased profiling of total transcripts
    \item Comparison with different environmental conditions
@@ -91,4 +37,76 @@ Rise of regulatory RNA\cite{Morris2014}.
    \item template-free activity of reverse transcriptase, leads to an additional G nucleotide to the 5' end
 \end{itemize}
 
-Parkinson’s disease (PD) is a slowly progressive disease in which dopamine neurons in the substantia nigra degenerate undetected for years before clinical symptoms develop. The lack of clinical symptoms highlights the necessity of a laboratory test, such as an assay for biomarkers, which can correlate subjects with PD risk. We have profiled the RNAs in the whole blood sample of PD patients and age-matched controls using high-throughput deepCAGE sequencing. By comparing the RNA profiles between PD patients and controls, we aim to discover novel biomarkers that are present in whole blood, which may be further developed into a non-invasive clinical test for PD.
+For example, in an early benchmark of RNA-Seq using the Solexa/Illumina sequencing technology, replicate sequencing runs on the same samples demonstrated that technical variations from sequencing were small\cite{pmid18550803}.
+
+The first indication of the importance of non-polyadenylated transcripts\cite{pmid4213457}.
+
+Starting RNA amount required by different protocols and it may not be possible obtain sufficient amounts of starting material. Thus PCR-based techniques are popular and are able to amplify RNA isolated from single cells. This leads to less heterogeneity compared to techniques that pool cells, which may have very different expression profiles. It is important to obtain a true profile of transcription in cells. PCR amplification is necessary for fluorescent-based imaging. PCR bias from GC and AT frequencies.
+
+Cytoplasmic versus nuclear enrichment. The complexity of nuclear transcripts determined by denaturation-renaturation experiments\cite{pmid5969070}
+
+If our assumption is correct, there's one other feature of the spurious transcription that must be observed: the transcription will be cell specific or developmentally regulated. This is because different transcription factors are present in different cell types and at different stages of development. It's also because the accessibility of different parts of the genome vary from cell type to cell type and at different kinds of development. This is the transition from "open" chromatin to a "closed" version resembling heterochromatin.
+
+One criterion used to suggest function is context specificity of an RNA transcript. This includes tissue specificity, developmental stage specificity, or stimulus-specific activation, such as in response to stress.
+
+The underlying assumption is that the proximity of sequences to structurally significant sites implies a regulatory role
+
+Definition of a promoter in light of CAGE.
+
+CAGE versus RNA-Seq versus microarrays\cite{pmid24676093} Data interpretation and the limitation of CAGE, which is that we do not know the length of the transcripts.
+
+Many ncRNA have low evolutionary conservation and are lowly transcribed, and have been dismissed as technical artifacts and/or background transcription that have no biological importance. Alternatively spliced lncRNA\cite{Johnsson2013}.
+
+Are the majority of detected low-level transcription due to technical artifacts and/or background biological noise? Discussion about sequencing depth and saturation. Targeted RNA sequencing reveals the deep complexity of the human transcriptome\cite{pmid22081020}.
+
+Viable mouse with deletion of ultra-conserved regions\cite{pmid17803355} or Neat1\cite{pmid21444682}.
+
+Find evidence for function through comparative analyses and statistical methods (test for certain biases).
+
+
+TEs are a major genetic component of all organisms and a major contributor to the mutation process. It is currently estimated that 70-80% of spontaneous mutations are the result of TE-mediated insertions, deletions, or chromosomal rearrangements. Thus, it seems at least plausible that TEs may play a significant role in the adaptation and evolution of natural populations and species.
+
+The ubiquity of TEs suggests that they are an old component of genomes which have been vertically transmitted through generations over evolutionary time.
+
+The relationship between TEs and their host genomes:
+
+Are TEs like parasites or symbionts coevolving with their host genome? Do TEs constitute a genetic load for the host genome? Are TEs able to sequester host genes for their own evolution? Are host genomes able to sequester TE sequences for host functions? How can TEs be transferred from one species to another and what is the frequency of this phenomenon?
+
+LTR retrotransposons and the evolution of eukaryotic enhancers - http://www.ncbi.nlm.nih.gov/pubmed/9440254
+
+Since LTR retrotransposons and retroviruses are especially prone to regional duplication and recombination events, these viral-like systems may be especially conducive to the evolution of closely spaced combinatorial regulatory motifs. Using the Drosophila copia LTR retrotransposon as a model, we show that a regulatory region contained within the element’s untranslated leader region (ULR) consists of multiple copies of an 8 bp motif (TTGTGAAA) with similarity to the core sequence of the SV40 enhancer.
+
+Retrotransposons are the most abundant and widely distributed class of eukaryotic transposable elements. Retrotransposon insertions adjacent to chromosomal genes frequently result in altered regulatory phenotypes. For example, retrotransposon insertions into a gene’s 5’ flanking region may affect transcriptional initiation in a temporal-specific or tissue-specific manner. Such regulatory changes can be due to the read-through of transcripts initiated in the retrotransposon promoter or to the presence of positive or negative regulatory sequences within the element. Another way in which retrotransposons may influence gene expression is through insertion induced changes in chromatin structure which may, for example, insulate a gene’s promoter from enhancer sequences located distal to the site of insertion.
+
+Although the hypothesis that transposable elements may have a dramatic effect on regulatory evolution was first proposed by McClintock over 40 years ago, it is only recently that experimental evidence has begun to accumulate which directly supports the hypothesis. Instances of retrotransposons contributing to the evolution of chromosome gene regulation have recently been described in vertebrates, Drosophila and plants. Because it now seems likely that the regulatory evolution of at least some chromosomal genes has been influenced by retrotransposon insertions, the question arises as to what factors may be influencing the evolution of retrotransposon regulatory sequences in the first place.
+
+LTR retrotransposons are closely related to infectious retroviruses and encode genes homologous to the retroviral gag and pol genes flanked by long terminal repeats (LTRs). Because of the similarity between retroviruses and LTR retrotransposons with regard to their structure and regulatory controls, we will group them in this paper under the collective heading “LTR retroelements”. The cis-regulatory sequences contained within LTR retroelement LTRs and adjacent untranslated leader regions (ULRs) interact with host encoded regulatory proteins to control LTR retroelement expression.
+
+Enhancers are cis-acting sequences that increase the utilisation of promoters usually in a tissue and/or developmental specific manner. Enhancers characteristically consist of a series of short repeated sequence motifs that are often associated with regulatory protein binding domains. For example, the well-studied enhancer of the simian virus-40 (SV-40) early genes consists of a 6 bp DNA sequence motif (CCGCCC) which is repeated six times. The rabbit beta-globin enhancer consists of two adjacent 14 bp sequence motifs. The repeated motifs within enhancers are usually binding sites for regulatory proteins and the strength of an enhancer (i.e., the relative effect the enhancer has on promoter initiation) is often positively correlated with the number of repeating motifs it contains.
+
+The characteristic pattern of repeating motifs present within LTR retroelement enhancers is a characteristic by-product of reverse transcriptase mediated replication
+
+Examination of the LTR retrotransposon enhancers shown in Figure 2 reveals three characteristic patterns of repeats. The simplest pattern is a series of short randem sequence motifs as present within the HIV-1, VL30, TNT-1, and gypsy enhancers. An intermediate pattern of complexity consisting of a series of short tandem motifs repeated as a unit two or more times is exemplified within the gypsy enhancer. An example of a more complex pattern in which two or more adjacent heterologous motifs are repeated as a group two or more times is present within the VL30 enhancer. Each one of these patterns can be generated during LTR retrotransposon replication.
+
+Reverse transcriptase (RT) mediated LTR retroelement replication is a highly error prone process with no proofreading ability. One common error in the reverse transcriptase process is the generation of short regional duplications. In addition, frequent recombination events are also known to occur between the two genomic RNA strands packages within LTR retroelement capsids. Regional mispairing between these two RNA templates and/or template switching errors during reverse transcription are capable of generating the more complex patterns found in many retroviral and LTR retrotransposon enhancers. LTR retroelements may also be subject to unequal ectopic recombination events between repeating elements within a genome. Such unequal DNA level exchanges could also contribute to the generation of the complex motif patterns seen in many retroviral and LTR retrotransposon enhancers.
+
+The Drosophila copia LTR retroelement is a model system for the study of LTR retroelement enhancer evolution
+
+Because LTR retroelements may be continually generating variation within their non-encoding enhancer regions, continuous opportunities may exist for natural selection to favour the evolution of adaptive enhancer configurations. This hypothesis rests upon the assumption that at least some of the structural variability being generated within LTR retroelement enhancer regions provides a reproductive advantage upon which natural selection can act. We have begun to address this and related issues concerning the evolution of LTR retroelement enhancers within the context of the Drosophila copia LTR retroelement.
+
+Copia RNA levels are variable among Drosophila species
+
+Transcription is a major rate-limiting step in the retrotransposition process. Thus, naturally occurring genetic variation that influences the transcription of retrotransposons may be of evolutionary significance. We previously reported that steady state levels of copia RNA in Drosophila adults varies significantly among D. melanogaster populations. In that same study it was reported that non copia transcripts are detectable in D. simulans or D. mauritiana adults. We recently reported that transcript levels in larvae follow these same trends. Variation in copia transcript levels between D. melanogaster populations can vary ~ 30-fold, whereas no transcripts are detectable in other melanogaster group species nor in D. willistoni.
+
+Naturally occurring variation in the number of repeating motifs within the copia LTR-ULR is of functional significance
+
+The 9 bp repeating motif within the copia ULR is a binding site for at least two host-encoded proteins. A computer search revealed a significant similarity between the 9 bp motif that is repeated seven times within the full-length copia ULR and the consensus C/EBP (CCAAT/enhancer binding protein) binding site. C/EBP is a mammalian transcriptional activator. It has recently been reported that C/EBP is a trans-regulator of the human LTR retroelement, HIV-1.
+
+The full-length copia ULR is capable of enhancing expression of a heterologous chromosomal gene
+
+The results summarised up to now indicate that naturally occurring copia variants lacking a 28 bp region within their ULR have significantly reduced expression relative to variants containing the 28 bp region. To determine whether the copia ULR with or without the 28 bp gap has properties characteristic of a eukaryotic enhancer, we conducted transient expression assays to test if a copia full-length ULR and a ULR lacking the 28 bp region could influence the ability of a heterologous hsp 70 minimal promoter to drive expression of a bacterial CAT reporter gene in D. melanogaster. The results summarised in Figure 6 indicate that when the full-length ULR is placed upstream of the hsp 70 minimal promoter, it stimulates expression four-fold relative to the control. The ULR lacking the 28 bp region, on the other hand, had no significant enhancer effect on the hsp 70 minimal reporter relative to the control.
+
+We propose that LTR retrotransposons may constitute a mechanism by which eukaryotic enhancers evolve and are subsequently distributed throughout eukaryotic genomes over evolutionary time. This model is based on three hypotheses: 1) that reverse transcriptase mediated LTR retroelement replication is prone to the generation of short regional duplications that are characteristic of eukaryotic enhancers; 2) that at least some of this size variation within LTR/ULRs can lead to the emergence of new LTR retroelement enhancers and/or to an increase in the strength of existing enhancers thereby providing an opportunity for selection; 3) that enhancers that evolve by this mechanism within LTR retroelements also have the potential to exert cis-regulatory effects on the expression of chromosomal genes when distributed throughout the genome by retrotransposition.
+
+Recent findings indicate that eukaryotic enhancers act by facilitating the formation of stable domains within which promoter activity is permitted. Although the effect of enhancers on the expression of extrachromosomal gene constructs, as monitored in transient assays, is considered to be the same as for constructs stably integrated within chromosomes, the later situation is clearly more complex. Stably integrated genetic constructs have been shown to be relatively more efficient at creating a transcriptionally active state within regions of inactive chromatin when they contain an enhancer. By implication, we envision that LTR retrotransposons with the strongest enhancers may have the highest probability of being expressed in any chromosomal context.
+

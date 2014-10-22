@@ -65,12 +65,18 @@
 \chapter*{List of publications}
 
 \begin{enumerate}
-\item \bibentry{Tang01022013}
-\item \bibentry{fantom5repeat}
-\item \bibentry{bloodtranscriptome}
-\item \bibentry{francia2012site}
-\item \bibentry{saxena2012pirnas}
-\item \bibentry{hasegawa2014ccl2}
+   \item \bibentry{Tang01022013}
+   \item \bibentry{francia2012site}
+   \item \bibentry{fantom5repeat}
+   %\item \bibentry{bloodtranscriptome}
+\end{enumerate}
+
+\section*{Other publications}
+
+\begin{enumerate}
+   \setcounter{enumi}{3}
+   \item \bibentry{saxena2012pirnas}
+   \item \bibentry{hasegawa2014ccl2}
 \end{enumerate}
 
 \tableofcontents
@@ -80,43 +86,40 @@
 \input{chapter/abbreviation}
 
 \chapter{Introduction}\label{intro}
-\fancytab{Chapter ~\ref{intro}}{0.8}
+\fancytab{Chapter ~\ref{intro}}{1}
 \input{chapter/introduction}
 
 \chapter{Template switching artifacts}\label{template_switching}
-\fancytab{Chapter ~\ref{template_switching}}{1.6}
+\fancytab{Chapter ~\ref{template_switching}}{2}
 \input{chapter/template_switching}
 %to include page styles in pdf, pagecommand=\thispagestyle{plain}
 \includepdf[pages={-}, lastpage={12}]{paper/barcode_bias.pdf}
 
 \chapter{Role of small RNAs in DNA damage repair}\label{ddrna}
-\fancytab{Chapter ~\ref{ddrna}}{2.4}
+\fancytab{Chapter ~\ref{ddrna}}{3}
 \input{chapter/ddrna}
 \includepdf[pages={-}, lastpage={8}]{paper/ddrna.pdf}
 
-\chapter{Rett syndrome and piRNAs}\label{pirna}
-\fancytab{Chapter ~\ref{pirna}}{3.2}
-\input{chapter/pirna}
-\includepdf[pages={-}, lastpage={15}]{paper/pirna.pdf}
+%\chapter{Rett syndrome and piRNAs}\label{pirna}
+%\fancytab{Chapter ~\ref{pirna}}{3.2}
+%\input{chapter/pirna}
+%\includepdf[pages={-}, lastpage={15}]{paper/pirna.pdf}
 
-\chapter{CCL2 activates hypoxia related genes}\label{ccl2}
-\fancytab{Chapter ~\ref{ccl2}}{4}
-\input{chapter/ccl2}
-\includepdf[pages={-}, lastpage={9}]{paper/ccl2.pdf}
+%\chapter{CCL2 activates hypoxia related genes}\label{ccl2}
+%\fancytab{Chapter ~\ref{ccl2}}{4}
+%\input{chapter/ccl2}
+%\includepdf[pages={-}, lastpage={9}]{paper/ccl2.pdf}
 
 \chapter{Regulated expression of repetitive elements}\label{repeat}
-\fancytab{Chapter ~\ref{repeat}}{4.8}
+\fancytab{Chapter ~\ref{repeat}}{4}
 \input{chapter/repeat}
 
-\chapter{The blood transcriptome}\label{blood}
-\fancytab{Chapter ~\ref{blood}}{5.6}
-\input{chapter/blood}
+%\chapter{The blood transcriptome}\label{blood}
+%\fancytab{Chapter ~\ref{blood}}{5.6}
+%\input{chapter/blood}
 
-%\chapter{Regression modelling of sequencing data}
-%\input{chapter/regression}
-
-\chapter{General discussion}
-\fancytab{Chapter 8}{6.4}
+\chapter{General discussion}\label{discussion}
+\fancytab{Chapter ~\ref{discussion}}{5}
 \input{chapter/discussion}
 
 \chapter*{Acknowledgements}

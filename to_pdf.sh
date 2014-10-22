@@ -6,6 +6,9 @@ usage(){
    exit 1
 }
 
+#remove old files
+./clean.sh
+
 #check for input parameter
 [[ $# -eq 0 ]] && usage
 
