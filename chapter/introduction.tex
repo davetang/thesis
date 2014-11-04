@@ -187,25 +187,15 @@ One peculiar observation among eukaryotic genome sizes, known as the C-value eni
    \label{fig:repeat_coverage_vertebrate_genome}
 \end{figure}
 
-\subsection{Impact of repetitive elements on genomes}
+\subsection{Impact of transposable elements on genomes}
 
-Despite the dismissal that TEs are purely selfish and evidence that they are not essential, it is evident that they have played a role in shaping eukaryotic genomes. In one of the original papers dismissing TEs, the authors left open the possibility that some TEs may become useful:
+Genome evolution has been largely affected by TEs, which have the ability to move around within genomes. The activity of TEs have led to insertion mutations and genomic instability, but have also contributed to genetic innovation\cite{pmid19763152}. Despite the dismissal that TEs are purely selfish and are non-essential elements, the possibility that some TEs may become useful was speculated:
 
 \epigraph{``It would be surprising if the host genome did not occasionally find some use for particular selfish DNA sequences, especially if there were many different sequences widely distributed over the chromosomes. One obvious use $\ldots$ would be for control purposes at one level or another. This seems more than plausible."}{--- \textup{Orgel and Crick 1980}}
 
-Indeed there is an increasing appreciation of TEs serving as a source for evolutionary innovation\cite{Muotri15102007, pmid18368054}.
+While the estimated number of active TEs in the human genome is less than 0.05%\cite{pmid17331616}, it is clear that TEs have impacted the evolution of genomes. There is increasing evidence that TEs have served as a source for evolutionary innovation by contributing to the evolution of regulatory networks\cite{pmid18368054}, influenced alternative splicing\cite{pmid18818740}, drove the evolution of lncRNAs\cite{pmid23637635}, and provided alternative promoters for genes\cite{pmid19577618}. These examples illustrate the process of exaptation, where a character (the TE) becomes co-opted for a new function that it was not originally functional for\cite{Gould01011982}. As speculated by Orgel and Crick, there may be many other examples of TE exaptation, however, large-scale analysis of TE expression have been limited. This was due to cross-hybridisation problems with repetitive sequences in microarrays and the short read nature of current high-throughput sequencers.
 
-Exaptation\cite{Gould01011982}.
-
-Kapusta lncRNA\cite{pmid23637635}. Kung et al.,\cite{pmid23463798}.
-
-By providing transcription factor binding sites (TFBSs) that serve as promoters and enhancers, leading to the hypothesis that TE exaptation is a major factor in the evolution of gene regulation\cite{pmid23486611}.
-
-TEs may become exapted, a process where TE have acquired function, which may be positively selected for. For example, TEs may acquire a regulatory function by providing TFBSs for TFs and thereby drive the expression of a nearby DNA.
-
-In a study examining the binding sites of various TFs, it was discovered that REs can provide binding sites for TFs; these sites were termed repeat-associated binding sites (RABS)\cite{pmid18682548}. Importantly, the study demonstrated that RABS are over-represented in proximity of regulated genes and that the binding motifs within these repeats have undergone evolutionary selection.
-
-CAGE also demonstrated that many TEs are indeed transcribed in a tissue-specific manner and served as alternative promoters\cite{pmid19377475}. Corroborating with tissue-specific expression of TEs was a study demonstrating that methylation patterns of TEs differed amongst different tissues\cite{pmid23708189}. Though not a definitive measure, tissue-specific expression patterns are still useful for separating signal from noise as expression patterns are not a consequence of random experimental noise.
+In one of the first genome-wide profiling studies of TE expression, it was revealed that a large number of transcriptional events initiate within TEs in a tissue specific manner\cite{pmid19377475}. Many of these TSSs were validated experimentally to show that TEs served as alternative promoters. In order to deal with the multi-mapping nature of reads corresponding to TEs, a probabilistic method called multi-map rescue was implemented\cite{pmid18178374}, which allowed reads to be assigned probabilistically based on the nearby region. Another genome-wide study examining the methylation patterns of TEs revealed tissue-specific methylation patterns\cite{pmid23708189}. In this study, the authors developed the Repeat Analysis Pipeline (RAP), to deal with ambiguously mapped reads, in a manner that aggregates reads to families of repeats\cite{pmid20584328}. Both of these studies illustrate the importance of developing specific methodologies for analysing TEs and that TEs have been important in regulating the expression of genes.
 
 \section{Bioinformatics and genomics}
 
