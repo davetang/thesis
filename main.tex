@@ -77,15 +77,15 @@
    \setcounter{enumi}{3}
    \item \bibentry{saxena2012pirnas}
    \item \bibentry{hasegawa2014ccl2}
+   \item \bibentry{bloodtranscriptome}
 \end{enumerate}
 
 \tableofcontents
-
 \listoffigures
-
 \listoftables
 
 \input{chapter/abbreviation}
+
 
 \chapter{Introduction}\label{intro}
 \fancytab{Chapter ~\ref{intro}}{1}
@@ -95,12 +95,17 @@
 \fancytab{Chapter ~\ref{template_switching}}{2}
 \input{chapter/template_switching}
 
+In this work, we studied the transcriptional landscape in whole blood using a technology called nano Cap Analysis Gene Expression (nanoCAGE). While it was expected that the variability between samples would be high due to the heterogeneous nature of whole blood, unexpectedly, samples prepared with the same or similar barcodes had very similar expression profiles regardless of biological origin. This affected differential expression analyses whereby the estimation of variability was increased due to biological replicates having very different expression profiles. In order to adjust for the barcode bias, we identified template-switching artefacts that caused the bias, and developed a bioinformatic solution for removing these artefacts and improved the nanoCAGE protocol to mitigate the barcode bias. This work laid the groundwork for analysing transcriptome profiling using high-throughput sequencing, by understanding how technical artefacts and biases are able to form and affect downstream analyses.
+
 %to include page styles in pdf, pagecommand=\thispagestyle{plain}
 \includepdf[pages={-}, lastpage={12}]{paper/barcode_bias.pdf}
 
 \chapter{Role of small RNAs in DNA damage repair}\label{ddrna}
 \fancytab{Chapter ~\ref{ddrna}}{3}
 \input{chapter/ddrna}
+
+It has been previously reported that small RNAs play a role in establishing the DNA damage response\cite{pmid19444217}. We leveraged the discovery potential of small RNA sequencing to gain some insight into the potential interplay between small RNAs and DNA damage. Intriguingly, we discovered that small RNAs formed near the site of DNA damage. We considered alternative hypotheses that could explain the presence of these small RNAs such as RNA degradation or technical artefacts. We characterised certain features of the DNA damage small RNAs (DDRNAs) to the population of sequenced small RNAs and observed that the bulk of the DDRNAs had a characteristic size and nucleotide profile, suggesting that they are not random degradation products. Furthermore, we performed experiments to suggest possible biogenesis pathways and the knock-down of Dicer and Drosha, which are enzymes involved with small RNA processing, affected the profile of DDRNAs and impaired the DNA damage response. This work has important implications to the observation that the genome is pervasively transcribed, as it offers a hypothesis that pervasive transcription is necessary for maintaining DNA integrity.
+
 \includepdf[pages={-}, lastpage={8}]{paper/ddrna.pdf}
 
 %\chapter{Rett syndrome and piRNAs}\label{pirna}
@@ -116,6 +121,8 @@
 \chapter{Regulated expression of repetitive elements}\label{repeat}
 \fancytab{Chapter ~\ref{repeat}}{4}
 \input{chapter/repeat}
+
+It is well established that the human genome is pervasively transcribed and this has been attributed to a ``leaky" transcriptional system. Our observation that small RNAs are formed near the vicinity of DNA damaged sites and are required for establishing the DNA damage response, implies that all RNAs are potentially useful, since any site in the genome is vulnerable to DNA damage. A class of RNA that is often neglected from study are those that form from the repetitive portion of the genome. It is estimated that at least half of the human genome is made up of repetitive elements (REs) and transcription initiation has been observed within these elements\cite{pmid19377475}. However, the general impression is that these elements are non-functional and are simply transcriptional noise. Motivated by the hypothesis that all RNAs could be potentially useful, we quantified and catalogued expression signal from REs using the FANTOM5 atlas.
 
 %\chapter{The blood transcriptome}\label{blood}
 %\fancytab{Chapter ~\ref{blood}}{5.6}
