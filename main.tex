@@ -15,10 +15,12 @@
    urlcolor=black
 }
 
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage[sort,comma]{natbib}
 \usepackage{epigraph}
 \setlength\epigraphwidth{.8\textwidth}
 \setlength\epigraphrule{0pt}
-
+\usepackage{pbox}
 \usepackage{graphicx}
 \usepackage{pdfpages}
 \graphicspath{ {image/} }
@@ -104,7 +106,9 @@ In this work, we studied the transcriptional landscape in whole blood using a te
 \fancytab{Chapter ~\ref{ddrna}}{3}
 \input{chapter/ddrna}
 
-It has been previously reported that small RNAs play a role in establishing the DNA damage response\cite{pmid19444217}. We leveraged the discovery potential of small RNA sequencing to gain some insight into the potential interplay between small RNAs and DNA damage. Intriguingly, we discovered that small RNAs formed near the site of DNA damage. We considered alternative hypotheses that could explain the presence of these small RNAs such as RNA degradation or technical artefacts. We characterised certain features of the DNA damage small RNAs (DDRNAs) to the population of sequenced small RNAs and observed that the bulk of the DDRNAs had a characteristic size and nucleotide profile, suggesting that they are not random degradation products. Furthermore, we performed experiments to suggest possible biogenesis pathways and the knock-down of Dicer and Drosha, which are enzymes involved with small RNA processing, affected the profile of DDRNAs and impaired the DNA damage response. This work has important implications to the observation that the genome is pervasively transcribed, as it offers a hypothesis that pervasive transcription is necessary for maintaining DNA integrity.
+It has been previously reported that small RNAs play a role in establishing the DNA damage response\cite{pmid19444217}. We leveraged the discovery potential of small RNA sequencing to gain some insight into the potential interplay between small RNAs and DNA damage. Intriguingly, we discovered that small RNAs formed near the site of DNA damage. We considered alternative hypotheses that could explain the presence of these small RNAs such as RNA degradation or technical artefacts. We\footnote{All the bioinformatic analysis and data interpretation was performed by Dave Tang.} characterised certain features of the DNA damage small RNAs (DDRNAs) to the population of sequenced small RNAs and observed that the bulk of the DDRNAs had a characteristic size and nucleotide profile, suggesting that they are not random degradation products. Furthermore, we performed experiments to suggest possible biogenesis pathways and the knock-down of Dicer and Drosha, which are enzymes involved with small RNA processing, affected the profile of DDRNAs and impaired the DNA damage response. This work has important implications to the observation that the genome is pervasively transcribed, as it offers a hypothesis that pervasive transcription is necessary for maintaining DNA integrity.
+
+
 
 \includepdf[pages={-}, lastpage={8}]{paper/ddrna.pdf}
 
@@ -124,7 +128,7 @@ It has been previously reported that small RNAs play a role in establishing the 
 
 It is well established that the human genome is pervasively transcribed and this has been attributed to a ``leaky" transcriptional system. Our observation that small RNAs are formed near the vicinity of DNA damaged sites and are required for establishing the DNA damage response, implies that all RNAs are potentially useful, since any site in the genome is vulnerable to DNA damage. A class of RNA that is often neglected from study are those that form from the repetitive portion of the genome. It is estimated that at least half of the human genome is made up of repetitive elements (REs) and transcription initiation has been observed within these elements\cite{pmid19377475}. However, the general impression is that these elements are non-functional and are simply transcriptional noise. Motivated by the hypothesis that all RNAs could be potentially useful, we quantified and catalogued expression signal from REs using the FANTOM5 atlas.
 
-\includepdf[pages={-}, lastpage={16}]{paper/repeat.pdf}
+\includepdf[pages={-}, lastpage={21}]{paper/repeat.pdf}
 
 %\chapter{The blood transcriptome}\label{blood}
 %\fancytab{Chapter ~\ref{blood}}{5.6}
@@ -137,7 +141,8 @@ It is well established that the human genome is pervasively transcribed and this
 \chapter*{Acknowledgements}
 \input{chapter/acknowledgements}
 
-\bibliographystyle{unsrt}
+\bibliographystyle{plainnat}
+%\bibliographystyle{unsrt}
 \bibliography{bibliography/reference}
 
 \end{document}
