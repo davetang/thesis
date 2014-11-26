@@ -24,5 +24,6 @@ makeglossaries $file
 bibtex $file
 latex $file
 pdflatex $file
+pdflatex $file
 
 ./clean.sh
