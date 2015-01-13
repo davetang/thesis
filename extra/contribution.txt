@@ -1,0 +1,7 @@
+Chapter 3 - Role of small RNAs in DNA damage repair
+
+I was involved in the data processing, analysis, and interpretation of the two small RNA datasets produced to study the role of small RNAs (sRNA) in DNA damage repair. I implemented a short RNA pipeline (see https://github.com/davetang/22722852 for a description; I will gradually upload all the code to this repository) for the raw data processing to examine the sRNA products produced by DNA damage. Furthermore, I conducted various analyses studying and characterising the sequence composition, length, genomic distribution, and expression levels of the DNA damage small RNAs. Lastly, I conducted the statistical tests to support various biases observed among the DNA damage small RNAs under the assistance of Michiel de Hoon.
+
+Chapter 4 - Rett syndrome and piRNAs
+
+Similar to the work in chapter 3, I was involved in the data processing, analysis, and interpretation of the small RNA dataset produced from Rett syndrome model mice; I have documented most of the work at https://github.com/davetang/22976001. I performed most of the bioinformatic work in this work and contributed to the manuscript.
