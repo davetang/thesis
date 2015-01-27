@@ -1,5 +1,6 @@
-\documentclass[12pt,a4paper,sans]{article}
+\documentclass[10pt,a4paper,sans]{article}
 \usepackage{dirtytalk}
+\usepackage{amsmath}
 
 \begin{document}
 
@@ -8,29 +9,59 @@
 \begin{itemize}
    \item{Abstract: high throughput sequencing is not unbiased. It is definitely more comprehensive than microarrays.}
 \end{itemize}
-\noindent
 
+\noindent
 I have re-worded the original sentence:
 \\\\
-\say{Traditionally, transcriptome profiling has relied on microarray technologies but with the advent of high-throughput sequencing, the ability to profile transcripts accurately and in an unbiased manner has transformed the study of transcriptomes.}
+\say{Traditionally, transcriptome profiling has relied on microarray technologies but with the advent of high-throughput sequencing, the ability to profile transcripts accurately and in an unbiased manner has transformed the study of transcriptomes. However the applications of high-throughput sequencing to transcriptomics is relatively immature as developments have occurred in the last 5-6 years.}
 \\\\
 into
 \\\\
-\say{Traditionally, transcriptome profiling has relied on microarray technologies but with the advent of high-throughput sequencing, the ability to profile transcripts the ability to profile transcripts accurately and in an unbiased manner has transformed the study of transcriptomes.}
+\say{Traditionally, transcriptome profiling has relied on microarray technologies but with the advent of high-throughput transcriptome sequencing, transcripts can be profiled without \textit{a priori} knowledge of their sequence and their expression levels can be digitally measured. This has transformed the field of transcriptomics, however the applications of high-throughput sequencing to transcriptomics is relatively immature as developments have occurred in the last 5-6 years.}
 
 \begin{itemize}
    \item{Abstract: last sentence needs rephrasing}
 \end{itemize}
 
+\noindent
+I have re-worded the final paragraph of the abstract from:
+\\\\
+\say{The layers of complexity include the expression of multiple classes of RNA species, each performing various regulatory roles, random transcriptional events or transcriptional noise, and complexity perpetrated from technical artefacts. In order to separate noise from signal requires an understanding of the different technologies, careful scrutiny of the data, and the application of appropriate bioinformatic methods.}
+\\\\
+into
+\\\\
+\say{The interpretation of this complexity has been a highly controversial topic; on one end of the spectrum, is the theory that the majority of the genome is functional, and on the other end is the counter-argument that most of the genome produces non-functional products. An important point raised from this discussion was that simply observing a transcription event is not enough evidence for function. Transcriptional signal may come from the expression of various classes of RNA species, or from random transcription events and technical artefacts. It is important to keep these considerations in mind when analysing eukaryotic transcriptomic data sets.}
+
 \begin{itemize}
-   \item{Nederlandse samenvatting: tissue --> weefsel}
+   \item{Nederlandse samenvatting: tissue into weefsel}
 \end{itemize}
+
+\noindent
+I have re-worded the Dutch summary from:
+\\\\
+\say{$\dots$ waarbij hun expressie tissue specifiek is.}
+\\\\
+into
+\\\\
+\say{$\dots$ waarbij hun expressie weefsel specifiek is.}
 
 \section{Chapter 1}
 
 \begin{itemize}
    \item{The description of SAGE is a bit inaccurate as the sequences in the early SAGE method were indeed always 9-10 bp long but the tag is usually said to also contain the restriction enzyme site so the total length is 13-14 and therefore better able to discriminate transcripts than a 9-10 bp tag. Also, the tag is not at the ultimate 3’-end as the text suggests.}
 \end{itemize}
+\noindent
+In the thesis I wrote:
+\\\\
+\say{A technology called Serial Analysis of Gene Expression (SAGE) was the first tag-based approach, which created 9 to 10 bp long tags that generally corresponded to the 3' end of the transcripts.}
+\\\\
+This was based on what I read in Velculescu et al. 1995, which I quote:
+\\\\
+\say{SAGE is based on two principles. First, a short nucleotide sequence tag [9 to 10 base pairs (bp)] contains sufficient information to uniquely identify a transcript $\dots$}
+\\\\
+I had a look at the schematic of SAGE, and of course you are correct; the restriction site is also included in the tag. I guess since they could associate 95\% of the 9 bp tags to GenBank transcripts, they did not need the extra 4 bps? You are also correct about the 3' end. I have modified the sentence to:
+\\\\
+\say{A technology called Serial Analysis of Gene Expression (SAGE) was the first tag-based approach, which created 13 to 14 bp long tags (including the restriction site of the anchoring enzyme). These tags corresponded to the most 3' portion of a cDNA where a restriction site for the anchoring enzyme would be present.}
 
 \begin{itemize}
    \item{The CAGE figure could be clearer. Currently it is not clear that only capped RNAs are measured, and it is not clear the endonuclease cuts downstream of its recognition site.}
