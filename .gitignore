@@ -15,3 +15,9 @@ main.alg
 main.dvi
 main.out
 *.swp
+cover/*.gz
+cover/*.bigWig
+cover/*.ba[im]
+cover/*.pdf
+cover/*.png
+cover/*.ai

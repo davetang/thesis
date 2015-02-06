@@ -1,0 +1,147 @@
+setwd("/Users/davetang/github/thesis/cover/")
+
+#install some packages
+source("http://bioconductor.org/biocLite.R")
+biocLite("Gviz")
+#transcript annotation package
+biocLite("TxDb.Hsapiens.UCSC.hg19.knownGene")
+install.packages("devtools")
+library("devtools")
+install_github('davetang/bedr')
+
+#load libraries
+library(Gviz)
+library(TxDb.Hsapiens.UCSC.hg19.knownGene)
+library(bedr)
+
+#set genome and chromosome
+gen <- 'hg19'
+chr <- 'chr22'
+
+#genome axis track, as the function suggests
+gtrack <- GenomeAxisTrack()
+#ideogram track, requires Internet connection
+itrack <- IdeogramTrack(genome = gen, chromosome = chr)
+#TxDb object
+txdb <- TxDb.Hsapiens.UCSC.hg19.knownGene
+#gene track
+grtrack <- GeneRegionTrack(txdb,
+                           genome = gen,
+                           chromosome = chr,
+                           fill='black',
+                           transcriptAnnotation = "symbol",
+                           name = "UCSC known genes")
+
+#raw ChIP-Seq data for RNA pol II
+raw_1 <-  DataTrack(range = 'wgEncodeHaibTfbsH1hescPol2V0416102RawRep1.bigWig',
+                    genome = gen,
+                    type = "l",
+                    chromosome = chr,
+                    name = "ChIP-Seq",
+                    col="#34D13F")
+
+#peaks from ChIP-Seq data
+peak_1 <- AnnotationTrack(range = bed_to_granges('wgEncodeHaibTfbsH1hescPol2V0416102PkRep1.broadPeak.gz'),
+                    genome = gen,
+                    name = 'ChIP-Seq',
+                    chromosome = chr,
+                    fill='#34D13F')
+
+#replicate raw ChIP-Seq data for RNA pol II
+raw_2 <- DataTrack(range = 'wgEncodeHaibTfbsH1hescPol2V0416102RawRep2.bigWig',
+                   genome = gen,
+                   type = "l",
+                   chromosome = chr,
+                   name = "bigWig",
+                   col="#DE2840")
+
+#replicate peaks from ChIP-Seq data
+peak_2 <- AnnotationTrack(range = bed_to_granges('wgEncodeHaibTfbsH1hescPol2V0416102PkRep2.broadPeak.gz'),
+                          genome = gen,
+                          name = 'Peaks',
+                          chromosome = chr,
+                          fill="#DE2840")
+
+#DNase I hypersensitive tracks
+dnase_1 <- AnnotationTrack(range = bed_to_granges('wgEncodeUwDnaseH1hescPkRep1.narrowPeak.gz'),
+                          genome = gen,
+                          name = 'DNase I',
+                          chromosome = chr,
+                          fill='#273BA3')
+dnase_2 <- AnnotationTrack(range = bed_to_granges('wgEncodeOpenChromDnaseH1hescPk.narrowPeak.gz'),
+                          genome = gen,
+                          name = 'DNase I',
+                          chromosome = chr,
+                          fill = '#273BA3')
+
+#conservation tracks
+phylop <- DataTrack(range = 'chr22.phyloP46way.wig.gz',
+                   genome = gen,
+                   chromosome = 'chr22',
+                   name = "PhyloP",
+                   type="horizon"
+                   )
+phastcons <- DataTrack(range = 'chr22.phastCons46way.wig.gz',
+                    genome = gen,
+                    chromosome = 'chr22',
+                    name = "phastCons",
+                    type="horizon"
+                    )
+
+my_bam_file <- c('wgEncodeRikenCageH1hescCellPapAlnRep1.bam',
+                 'wgEncodeRikenCageH1hescCellPapAlnRep2.bam')
+my_bam_size <- vector()
+
+#this only works for samtools r595 or later
+#RStudio couldn't read my $PATH
+for (i in 1:length(my_bam_file)){
+  my_command <- paste("~/bin/samtools idxstats",
+                      my_bam_file[1],
+                      "| awk '{s+=$3} END {print s}'")
+  n <- system(my_command, intern = T)
+  my_bam_size[i] <- n
+}
+
+#CAGE tracks as a DataTrack
+cage_1 <- DataTrack(range = my_bam_file[1],
+                    genome = gen,
+                    type = "l",
+                    name = "CAGE",
+                    window = -1,
+                    chromosome = chr,
+                    ylim=c(0,60),
+                    transformation=function(x){ x <- (x * 1000000)/as.numeric(my_bam_size[1])})
+cage_2 <- DataTrack(range = my_bam_file[2],
+                    genome = gen,
+                    type = "l",
+                    name = "CAGE",
+                    window = -1,
+                    chromosome = chr,
+                    ylim=c(0,60),
+                    transformation=function(x){ x <- (x * 1000000)/as.numeric(my_bam_size[2])})
+
+#CAGE tracks as AlignmentsTrack
+cage_aln_1 <- AlignmentsTrack(range = 'wgEncodeRikenCageH1hescCellPapAlnRep1.bam',
+                              name = 'CAGE reads')
+cage_aln_2 <- AlignmentsTrack(range = 'wgEncodeRikenCageH1hescCellPapAlnRep2.bam',
+                              name = 'CAGE reads')
+
+#chr22:29166375-29200166
+from <- 29186375
+to <- 29200166
+
+#overlay ChIP-Seq raw tracks
+chip_overlay <- OverlayTrack(trackList = list(raw_1, raw_2))
+
+ht1 <- HighlightTrack(trackList=list(gtrack, grtrack, cage_1, cage_2, chip_overlay, peak_1, peak_2, dnase_1, dnase_2, phylop, phastcons),
+                      start = c(29196100), width = 650,
+                      chromosome = chr)
+
+plotTracks(list(itrack, ht1), from = from, to = to)
+
+#zoom
+from <- 29196200
+to   <- 29196950
+
+plotTracks(list(itrack, gtrack, grtrack, cage_aln_1, cage_aln_2, chip_overlay, peak_1, peak_2, dnase_1, dnase_2, phylop, phastcons),
+           from = from, to = to)
