@@ -5,6 +5,7 @@ source("http://bioconductor.org/biocLite.R")
 biocLite("Gviz")
 #transcript annotation package
 biocLite("TxDb.Hsapiens.UCSC.hg19.knownGene")
+biocLite("BSgenome.Hsapiens.UCSC.hg19")
 install.packages("devtools")
 library("devtools")
 install_github('davetang/bedr')
@@ -13,6 +14,7 @@ install_github('davetang/bedr')
 library(Gviz)
 library(TxDb.Hsapiens.UCSC.hg19.knownGene)
 library(bedr)
+library(BSgenome.Hsapiens.UCSC.hg19)
 
 #set genome and chromosome
 gen <- 'hg19'
@@ -24,6 +26,8 @@ gtrack <- GenomeAxisTrack()
 itrack <- IdeogramTrack(genome = gen, chromosome = chr)
 #TxDb object
 txdb <- TxDb.Hsapiens.UCSC.hg19.knownGene
+#sequence track
+sTrack <- SequenceTrack(Hsapiens)
 #gene track
 grtrack <- GeneRegionTrack(txdb,
                            genome = gen,
@@ -144,4 +148,10 @@ from <- 29196200
 to   <- 29196950
 
 plotTracks(list(itrack, gtrack, grtrack, cage_aln_1, cage_aln_2, chip_overlay, peak_1, peak_2, dnase_1, dnase_2, phylop, phastcons),
+           from = from, to = to)
+
+#zoom in more
+from <- 29196470
+to   <- 29196580
+plotTracks(list(itrack, gtrack, sTrack, grtrack, cage_aln_1, cage_aln_2),
            from = from, to = to)
