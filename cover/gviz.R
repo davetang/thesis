@@ -27,7 +27,7 @@ itrack <- IdeogramTrack(genome = gen, chromosome = chr)
 #TxDb object
 txdb <- TxDb.Hsapiens.UCSC.hg19.knownGene
 #sequence track
-sTrack <- SequenceTrack(Hsapiens)
+sTrack <- SequenceTrack(Hsapiens, chromosome = chr, cex=0.5)
 #gene track
 grtrack <- GeneRegionTrack(txdb,
                            genome = gen,
@@ -147,11 +147,15 @@ plotTracks(list(itrack, ht1), from = from, to = to)
 from <- 29196200
 to   <- 29196950
 
-plotTracks(list(itrack, gtrack, grtrack, cage_aln_1, cage_aln_2, chip_overlay, peak_1, peak_2, dnase_1, dnase_2, phylop, phastcons),
+ht2 <- HighlightTrack(trackList=list(gtrack, grtrack, gtrack, grtrack, cage_aln_1, cage_aln_2),
+                      start = c(29196480), width = 90,
+                      chromosome = chr)
+
+plotTracks(list(itrack, ht2, chip_overlay, peak_1, peak_2, dnase_1, dnase_2, phylop, phastcons),
            from = from, to = to)
 
 #zoom in more
-from <- 29196470
-to   <- 29196580
+from <- 29196480
+to   <- 29196570
 plotTracks(list(itrack, gtrack, sTrack, grtrack, cage_aln_1, cage_aln_2),
            from = from, to = to)

@@ -21,3 +21,4 @@ cover/*.ba[im]
 cover/*.pdf
 cover/*.png
 cover/*.ai
+.Rhistory
