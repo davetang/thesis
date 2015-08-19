@@ -1,4 +1,4 @@
-\documentclass[12pt,a4paper]{report}
+\documentclass[11pt,a4paper]{report}
 
 %\setlength{\parskip}{\baselineskip}%
 %\setlength{\parindent}{0pt}%
@@ -33,7 +33,10 @@
 \setlength\epigraphrule{0pt}
 \usepackage{pbox}
 \usepackage{graphicx}
+
+% for inserting PDFs
 \usepackage{pdfpages}
+
 \graphicspath{ {image/} }
 \usepackage{epstopdf}
 \usepackage{bibentry}
@@ -172,18 +175,19 @@ copromotor: dr. P. Carninci
 \chapter{Template switching artefacts}\label{template_switching}
 \fancytab{Chapter ~\ref{template_switching}}{\tabSpace*\thechapter}
 \input{chapter/template_switching}
+
 %to include page styles in pdf, pagecommand=\thispagestyle{plain}
-\includepdf[pages={-}, lastpage={12}]{paper/barcode_bias.pdf}
+\includepdf[scale=1.1, pages={-}, lastpage={12}]{paper/barcode_bias.pdf}
 
 \chapter{Role of small RNAs in DNA damage repair}\label{ddrna}
 \fancytab{Chapter ~\ref{ddrna}}{\tabSpace*\thechapter}
 \input{chapter/ddrna}
-\includepdf[pages={-}, lastpage={8}]{paper/ddrna.pdf}
+\includepdf[scale=1.05, pages={-}, lastpage={8}]{paper/ddrna.pdf}
 
 \chapter{Rett syndrome and piRNAs}\label{pirna}
 \fancytab{Chapter ~\ref{pirna}}{\tabSpace*\thechapter}
 \input{chapter/pirna}
-\includepdf[pages={-}, lastpage={8}]{paper/pirna.pdf}
+\includepdf[scale=1.2, pages={-}, lastpage={8}]{paper/pirna.pdf}
 
 %\chapter{CCL2 activates hypoxia related genes}\label{ccl2}
 %\fancytab{Chapter ~\ref{ccl2}}{\tabSpace*\thechapter4}
@@ -193,7 +197,7 @@ copromotor: dr. P. Carninci
 \chapter{Regulated expression of repetitive elements}\label{repeat}
 \fancytab{Chapter ~\ref{repeat}}{\tabSpace*\thechapter4}
 \input{chapter/repeat}
-\includepdf[pages={-}, lastpage={21}]{paper/repeat.pdf}
+\includepdf[scale=1.5, pages={-}, lastpage={21}]{paper/repeat.pdf}
 
 %\chapter{The blood transcriptome}\label{blood}
 %\fancytab{Chapter ~\ref{blood}}{\tabSpace*\thechapter}
