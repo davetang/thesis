@@ -6,7 +6,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{tabto}
 
-%\usepackage[paperwidth=17cm, paperheight=24cm]{geometry}
+\usepackage[paperwidth=17cm, paperheight=24cm, margin=2cm]{geometry}
 
 %indent lists
 \usepackage{enumitem}
@@ -22,9 +22,9 @@
    urlcolor=black
 }
 
-\usepackage{fancytabs}
+%\usepackage{fancytabs}
 %variable for fancytabs spacing
-\newcommand{\tabSpace}{0.85}
+%\newcommand{\tabSpace}{0.85}
 
 \usepackage[font=footnotesize,labelfont=bf]{caption}
 \usepackage[sort,comma]{natbib}
@@ -169,25 +169,25 @@ copromotor: dr. P. Carninci
 \input{chapter/abbreviation}
 
 \chapter{Introduction}\label{intro}
-\fancytab{Chapter ~\ref{intro}}{\tabSpace*\thechapter}
+%\fancytab{Chapter ~\ref{intro}}{\tabSpace*\thechapter}
 \input{chapter/introduction}
 
 \chapter{Template switching artefacts}\label{template_switching}
-\fancytab{Chapter ~\ref{template_switching}}{\tabSpace*\thechapter}
+%\fancytab{Chapter ~\ref{template_switching}}{\tabSpace*\thechapter}
 \input{chapter/template_switching}
 
 %to include page styles in pdf, pagecommand=\thispagestyle{plain}
-\includepdf[scale=1.1, pages={-}, lastpage={12}]{paper/barcode_bias.pdf}
+\includepdf[pages={-}, lastpage={12}]{paper/barcode_bias.pdf}
 
 \chapter{Role of small RNAs in DNA damage repair}\label{ddrna}
-\fancytab{Chapter ~\ref{ddrna}}{\tabSpace*\thechapter}
+%\fancytab{Chapter ~\ref{ddrna}}{\tabSpace*\thechapter}
 \input{chapter/ddrna}
-\includepdf[scale=1.05, pages={-}, lastpage={8}]{paper/ddrna.pdf}
+\includepdf[pages={-}, lastpage={8}]{paper/ddrna.pdf}
 
 \chapter{Rett syndrome and piRNAs}\label{pirna}
-\fancytab{Chapter ~\ref{pirna}}{\tabSpace*\thechapter}
+%\fancytab{Chapter ~\ref{pirna}}{\tabSpace*\thechapter}
 \input{chapter/pirna}
-\includepdf[scale=1.2, pages={-}, lastpage={8}]{paper/pirna.pdf}
+\includepdf[pages={-}, lastpage={8}]{paper/pirna.pdf}
 
 %\chapter{CCL2 activates hypoxia related genes}\label{ccl2}
 %\fancytab{Chapter ~\ref{ccl2}}{\tabSpace*\thechapter4}
@@ -195,16 +195,16 @@ copromotor: dr. P. Carninci
 %\includepdf[pages={-}, lastpage={9}]{paper/ccl2.pdf}
 
 \chapter{Regulated expression of repetitive elements}\label{repeat}
-\fancytab{Chapter ~\ref{repeat}}{\tabSpace*\thechapter4}
+%\fancytab{Chapter ~\ref{repeat}}{\tabSpace*\thechapter4}
 \input{chapter/repeat}
-\includepdf[scale=1.5, pages={-}, lastpage={21}]{paper/repeat.pdf}
+\includepdf[scale=1.3, pages={-}, lastpage={21}]{paper/repeat.pdf}
 
 %\chapter{The blood transcriptome}\label{blood}
 %\fancytab{Chapter ~\ref{blood}}{\tabSpace*\thechapter}
 %\input{chapter/blood}
 
 \chapter{General discussion}\label{discussion}
-\fancytab{Chapter ~\ref{discussion}}{\tabSpace*\thechapter}
+%\fancytab{Chapter ~\ref{discussion}}{\tabSpace*\thechapter}
 \input{chapter/discussion}
 
 \chapter*{Acknowledgements}
